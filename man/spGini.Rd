@@ -6,8 +6,8 @@
 spGini(Coords, Bandwidth, x, WType = "Binary")
 }
 \arguments{
-  \item{Coords}{a numeric matrix or vector or dataframe of two columns giving the X,Y coordinates of the observations (data points or geometric / population weighted centroids)}
-  \item{Bandwidth}{a positive value that defines the number of nearest neighbours for the calculation of the weights}
+  \item{Coords}{a numeric matrix or vector or dataf rame of two columns giving the X,Y coordinates of the observations (data points or geometric / population weighted centroids)}
+  \item{Bandwidth}{a positive integer that defines the number of nearest neighbours for the calculation of the weights}
   \item{x}{a numeric vector of a variable}
   \item{WType}{string giving the weighting scheme used to compute the weights matrix. 
   Options are: "Binary", "Bi-square", "RSBi-square". Default is "Binary".

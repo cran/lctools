@@ -8,8 +8,7 @@ spGini<-function(Coords,Bandwidth,x,WType='Binary'){
   gGini_nom<-0.0
   gwGini_nom<-0.0
   nsGini_nom<-0.0
- 
-  
+   
   Wts<-matrix(data=0,nrow=Obs,ncol=Obs)
   
   for(m in 1:Obs){

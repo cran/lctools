@@ -32,10 +32,8 @@ Kalogirou, S., 2013, Testing geographically weighted multicollinearity diagnosti
 \author{Stamatis Kalogirou <skalo@hua.gr>}
 
 \examples{
-data(GreeceNew)
-GrNewCoords<-cbind(GreeceNew$X, GreeceNew$Y)
-CorVars<-GreeceNew[4:5]
-local.cor<-lcorrel(CorVars,0.5,GrNewCoords)
+data(VotesGR)
+local.cor<-lcorrel(VotesGR[5:6],0.1,cbind(VotesGR$X, VotesGR$Y))
 plot(local.cor$LPCC[,2],local.cor$GWPCC[,2])
 }
 \keyword{LPCC}

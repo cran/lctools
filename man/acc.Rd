@@ -31,8 +31,7 @@ Kalogirou, S., 2003, The Statistical Analysis And Modelling Of Internal Migratio
 
 \examples{
 data(GreeceLAs)
-aMeasure<-acc(GreeceLAs$X, GreeceLAs$Y,GreeceLAs$totalp,1)
-summary(aMeasure)
+aMeasure<-acc(GreeceLAs$X[1:100], GreeceLAs$Y[1:100],GreeceLAs$totalp[1:100],1)
 }
 
 \keyword{accessibility}

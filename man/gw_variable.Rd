@@ -30,12 +30,8 @@ Kalogirou, S., 2003, The Statistical Analysis And Modelling Of Internal Migratio
 
 \examples{
 data(GreeceLAs)
-GrCoords<-cbind(GreeceLAs$X, GreeceLAs$Y)
-Regional_Population <-gw_variable(GrCoords,GreeceLAs$totalp)
-OutFileName<-"RegionalPop2001.csv"
-write('AreaCode,Regional_Population_01',file=OutFileName)
-output <- data.frame(GreeceLAs$Area,Regional_Population)
-write.table(output,file = OutFileName,append=TRUE, sep=',',row.names=FALSE, col.names = FALSE)
+GrCoords<-cbind(GreeceLAs$X[1:100], GreeceLAs$Y[1:100])
+Regional_Population <-gw_variable(GrCoords,GreeceLAs$totalp[1:100])
 }
 
 \keyword{regional variable}
