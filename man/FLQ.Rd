@@ -32,12 +32,7 @@ Cromley, R. G. and Hanink, D. M. (2012), Focal Location Quotients: Specification
 
 \examples{
 data(VotesGR)
-
-Coords1<-cbind(VotesGR$X, VotesGR$Y)
-Bandwidth1<-4
-Denom<-0.2966
-
-res<-FLQ(Coords1,Bandwidth1,VotesGR$NDJune12,VotesGR$AllJune12,Denom)
+res<-FLQ(cbind(VotesGR$X, VotesGR$Y),4,VotesGR$NDJune12,VotesGR$AllJune12,0.2966)
 boxplot(res)
 }
 \keyword{LQ}

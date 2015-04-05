@@ -30,8 +30,9 @@ Kalogirou, S., 2003, The Statistical Analysis And Modelling Of Internal Migratio
 \note{X,Y should be Cartesian coordinates for the distances to be measured in meters. In the sample dataset GreeceLAs the projection used is the EPSG:2100 (GGRS87 / Greek Grid)}
 
 \examples{
-data(GreeceLAs)
-aMeasure<-acc(GreeceLAs$X[1:100], GreeceLAs$Y[1:100],GreeceLAs$totalp[1:100],1)
+data(GR.Municipalities)
+attr<-GR.Municipalities@data
+aMeasure<-acc(attr$X[1:100], attr$Y[1:100],attr$PopTot01[1:100],1)
 }
 
 \keyword{accessibility}

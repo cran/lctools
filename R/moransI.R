@@ -5,6 +5,10 @@ moransI<-function(Coords,Bandwidth,x,WType='Binary'){
   
   Obs<-length(x)
   
+  if(Bandwidth>=Obs){
+    Bandwidth<-Obs-1
+    msg<-cat("Bandwidth set to:",Bandwidth)}
+  
   moran_nom<-0.0
   moran_denom<-0.0
   sum.w<-0.0
@@ -19,8 +23,8 @@ moransI<-function(Coords,Bandwidth,x,WType='Binary'){
     #Sort by distance
     DataSetSorted<- DataSet[order(DataSet$DNeighbour),]
     
-    #Keep Nearest Neighvbours
-    SubSet1<-DataSetSorted[1:Bandwidth,]
+    #Keep Nearest Neighbours
+    SubSet1<-DataSetSorted[2:(Bandwidth+1),]
     
     #Find furthest neighbour
     Kernel_H<-max(SubSet1$DNeighbour)
@@ -41,7 +45,7 @@ moransI<-function(Coords,Bandwidth,x,WType='Binary'){
       
       if (j!=i){
          moran_nom<-moran_nom + Wts[i,j]*(x[i]-mean.x)*(x[j]-mean.x)
-         sum.w <- sum.w + Wts[i,j]}
+         sum.w <- sum.w + Wts[i,j] }
       else{
         Wts[i,j]<-0}
     
@@ -72,7 +76,6 @@ moransI<-function(Coords,Bandwidth,x,WType='Binary'){
     
   #Var(I)
   Var.I.resampling<-(((n^2) * S1 - n*S2 + 3 * (S0^2))/(((n^2)-1)*(S0^2)))-(E.I^2)
-  
   Var.I.randomization<-(n*((n^2-3*n+3)*S1-n*S2+3*S0^2))/((n-1)*(n-2)*(n-3)*S0^2)-(b2*((n^2-n)*S1-2*n*S2+6*S0^2))/((n-1)*(n-2)*(n-3)*S0^2)-(E.I^2)
   
   Z.I.resampling<-(morans.I-E.I)/sqrt(Var.I.resampling)

@@ -40,13 +40,13 @@ Rey, S.J., Smith J.S., 2013, A spatial decomposition of the Gini coefficient, Le
 \note{Acknowledgement: I would like to thank LI Zai-jun, PhD student at Nanjing Normal University, China for encouraging me to develop this function and for testing this package.}
 
 \examples{
-data(GreeceNew)
+data(GR.Municipalities)
 Nsim=19
 Bd1<-4
-x1<-GreeceNew$UnemplRate[1:45]
+x1<-GR.Municipalities@data$Income01[1:45]
 WType1<-'Binary'
 
-SIM20<-mc.spGini(Nsim,Bd1,x1,GreeceNew$X[1:45], GreeceNew$Y[1:45],WType1)
+SIM20<-mc.spGini(Nsim,Bd1,x1,GR.Municipalities@data$X[1:45], GR.Municipalities@data$Y[1:45],WType1)
 SIM20
 
 hist(SIM20$SIM$SIM.nsGini,col = "lightblue", main = "Observed and simulated nsGini",

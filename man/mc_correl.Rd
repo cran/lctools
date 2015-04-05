@@ -1,6 +1,6 @@
 \name{mc.lcorrel}
 \alias{mc.lcorrel}
-\title{Monte Carlo simulation for the significance of the local correlation coeficients}
+\title{Monte Carlo simulation for the significance of the local correlation coefficients}
 \description{In order to assess if the spatial variation of the local correlation coefficients is statistically significant this function computes original and simulated statistics. LPCCs and GWPCCs can be calculated for a fixed bandwidth for the original locations of the observations as well as for a user-defined number of geographical reallocations of the observations. The latter is a simple Monte Carlo simulation proposed by Hope (1968) and adopted by Fotheringham et al. (2002) who assess if local parameter estimates in a Geographically Weighted Regression model exhibit spatial non-stationarity. 
 First, the variances of LPCCs and GWPCCs, respectively, are computed for observed and simulated local correlation coefficients. Then, a pseudo p-value is calculated as p=(1+C)/(1+M) where C is the number of cases in which the variance of the simulated LPCCs and GWPCCs is equal to or higher than the variance of the observed LPCCs and GWPCCs, respectively of each test, and M is the number of permutations. If p<=0.05 it can be argued that the spatial variation of the local correlation coefficients is statistically significant. For this approach, a minimum of 19 permutations is required.}
 

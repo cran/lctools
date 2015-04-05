@@ -1,9 +1,9 @@
 \name{moransI}
 \alias{moransI}
 \title{Moran's I classic statistic for assessing spatial autocorrelation}
-\description{Moran's I is one of the oldest statistics used to examine spatial autocorrelation. This global statistic was first proposed by Moran (1948, 1950). Later, Cliff and Ord (1973, 1981) present a comprehensive work on spatial autocorrelation and suggested a formula to calculate the I which is now used in most textbooks and software: \deqn{I = (n/W)*(\Sigma \Sigma w_ij*z_i*z_j/ \Sigma z_i^2)} where n is number of observations, W is the sum of the weights w_ij for all pairs in the system, z_i=x_i - mean(x) where x is the value of the variable at location i and mean(x) the mean value of the variable in question (Eq. 5.2 Kalogirou, 2003).The implementation here allows only nearest neighbour weighting schemes. Resampling and randomization null hypotheses have been tested following the discussion of Goodchild (1986, pp. 24-26).}
+\description{Moran's I is one of the oldest statistics used to examine spatial autocorrelation. This global statistic was first proposed by Moran (1948, 1950). Later, Cliff and Ord (1973, 1981) present a comprehensive work on spatial autocorrelation and suggested a formula to calculate the I which is now used in most textbooks and software: \deqn{I = (n/W)*(\Sigma \Sigma w_{ij}*z_i*z_j/ \Sigma z_i^2)} where n is number of observations, W is the sum of the weights w_ij for all pairs in the system, z_i=x_i - mean(x) where x is the value of the variable at location i and mean(x) the mean value of the variable in question (Eq. 5.2 Kalogirou, 2003).The implementation here allows only nearest neighbour weighting schemes. Resampling and randomization null hypotheses have been tested following the discussion of Goodchild (1986, pp. 24-26).}
 
-\usage{moransI(Coords, Bandwidth, x, WType = "Binary")}
+\usage{moransI(Coords, Bandwidth, x, WType = 'Binary')}
 
 \arguments{
   \item{Coords}{a numeric matrix or vector or data frame of two columns giving the X,Y coordinates of the observations (data points or geometric / population weighted centroids)}
@@ -33,7 +33,7 @@
 }
 
 \references{
-Anselin, L., I. Syabri and Y Kho. ,2005, GeoDa: An Introduction to Spatial Data Analysis. Geographical Analysis 38(1), 5-22.
+Anselin, L., I. Syabri and Y Kho. ,2006, GeoDa: An Introduction to Spatial Data Analysis. Geographical Analysis 38(1), 5-22.
 
 Bivand et al., 2014, spdep: Spatial dependence: weighting schemes, statistics and models, http://cran.r-project.org/web/packages/spdep/index.html
 
@@ -53,14 +53,12 @@ Paradis et al., 2014, ape: Analyses of Phylogenetics and Evolution, http://cran.
 }
 \author{Stamatis Kalogirou <skalo@hua.gr>}
 
-\note{This function has been compared to the function Moran.I within the file MoranI.R of package ape version 3.1-4 (Paradis et al., 2014). This function results in the same Moran's I statistic as the one in package ape. The statistical inference in the latter refers to the randomization null hypotheses test discussed above. It is necessary to acknowledge that the code of this function has been assisted by the one in ape package: this is the calculation of statistics S1 and S2 (lines 67 and 69 of the source code) in this function. Another R package with functions for calculating and testing the Moran's I statistic and its significance is the spdep package (Bivand et al. 2014). The Moran's I statistic calculated using this function is not the same as the one in OpenGeoDa (Anselin et al., 2005). The latter is another very popular software for calculating spatial autocorrelation statistics.}
+\note{This function has been compared to the function Moran.I within the file MoranI.R of package ape version 3.1-4 (Paradis et al., 2014). This function results in the same Moran's I statistic as the one in package ape. The statistical inference in the latter refers to the randomization null hypotheses test discussed above. It is necessary to acknowledge that the code of this function has been assisted by the one in ape package: this is the calculation of statistics S1 and S2 (lines 67 and 69 of the source code) in this function. Another R package with functions for calculating and testing the Moran's I statistic and its significance is the spdep package (Bivand et al. 2014). The Moran's I statistic calculated using this function is not the same as the one in OpenGeoDa (Anselin et al., 2006). The latter is another very popular software for calculating spatial autocorrelation statistics.}
 
 \examples{
-data(GreeceNew)
-Coords<-cbind(GreeceNew$X, GreeceNew$Y)
-Bdw<-6
-x<-GreeceNew$UnemplRate
-mI<-moransI(Coords,Bdw,x)
+data(GR.Municipalities)
+attr<-GR.Municipalities@data
+mI<-moransI(cbind(attr$X, attr$Y),6,x<-attr$UnemrT01)
 
 mI$Morans.I
 mI$Expected.I

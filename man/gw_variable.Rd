@@ -29,9 +29,9 @@ Kalogirou, S., 2003, The Statistical Analysis And Modelling Of Internal Migratio
 \note{This code has been tested with Cartesian coordinates for the distances to be measured in meters. In the sample dataset GreeceLAs the projection used is the EPSG:2100 (GGRS87 / Greek Grid)}
 
 \examples{
-data(GreeceLAs)
-GrCoords<-cbind(GreeceLAs$X[1:100], GreeceLAs$Y[1:100])
-Regional_Population <-gw_variable(GrCoords,GreeceLAs$totalp[1:100])
+data(GR.Municipalities)
+GrCoords<-cbind(GR.Municipalities@data$X[1:100], GR.Municipalities@data$Y[1:100])
+Regional_Population <-gw_variable(GrCoords,GR.Municipalities@data$PopTot01[1:100])
 }
 
 \keyword{regional variable}
