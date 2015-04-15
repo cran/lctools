@@ -4,26 +4,16 @@ mc.lcorrel <- function(Nsim=99,bwSIM,CorVars,Coord.X,Coord.Y)
   lcorSIM<-matrix(data=NA, nrow=Nsim, ncol=11)
   
   Obs<-nrow(CorVars)
+  
+  Coords<-cbind(Coord.X,Coord.Y)
 
-  lcc0<-lcorrel(CorVars,bwSIM,cbind(Coord.X, Coord.Y))
+  lcc0<-lcorrel(CorVars,bwSIM, Coords)
   Obs.var.lpcc<-var(lcc0$LPCC[,2])
   Obs.var.gwpcc<-var(lcc0$GWPCC[,2])
 
   for(i in 1:Nsim){ 
-    #create random IDs
-    x=runif(Obs,min=1, max=Obs*(Nsim+1))
-    tx<-round(x/(Nsim+1))
-  
-    #add to observed coordinates
-    CoordsTmp<-data.frame(X=Coord.X,Y=Coord.Y, RandomID=tx)
     
-    #Sort by random to reallocate the observations
-    CoordsSorted<- CoordsTmp[order(CoordsTmp$RandomID),]
-    
-    #Define new coordinates
-    CoordsNew<-cbind(CoordsSorted$X, CoordsSorted$Y)
-    
-    lccSIM<-lcorrel(CorVars,bwSIM,CoordsNew)
+    lccSIM<-lcorrel(CorVars,bwSIM,Coords[sample(nrow(Coords)),])
     
     lcorSIM[i,1]<-i
     lcorSIM[i,2]<-mean(lccSIM$LPCC[,2])

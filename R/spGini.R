@@ -1,7 +1,6 @@
 spGini<-function(Coords,Bandwidth,x,WType='Binary'){
 
-  Distances<-dist(Coords)
-  Dij <- as.matrix(Distances)
+  Dij <- as.matrix(dist(Coords))
   
   Obs<-length(x)
   
@@ -49,13 +48,5 @@ spGini<-function(Coords,Bandwidth,x,WType='Binary'){
   
   Denom<-2*(Obs^2)*mean(x)
   
-  gGini<-gGini_nom/Denom
-  
-  gwGini<-gwGini_nom/Denom
-  
-  nsGini<-nsGini_nom/Denom  
-  
-  Results<-c(Gini=gGini,gwGini=gwGini,nsGini=nsGini)
-
-  return(Results)
+  return(c(Gini=gGini_nom/Denom,gwGini=gwGini_nom/Denom,nsGini=nsGini_nom/Denom))
 }

@@ -3,26 +3,16 @@ mc.spGini<-function(Nsim=99,Bandwidth,x,Coord.X,Coord.Y,WType='Binary')
   SIM.m<-matrix(data=NA, nrow=Nsim, ncol=5)
   
   Obs<-length(x)
-  Randoms.n<-10^ceiling(log(Obs,base=10))
   
-  spGini.Obs<-spGini(cbind(Coord.X,Coord.Y),Bandwidth,x,WType)
+  Coords<-cbind(Coord.X,Coord.Y)
+  
+  spGini.Obs<-spGini(Coords,Bandwidth,x,WType)
+  
   SG<-spGini.Obs[[3]]/spGini.Obs[[1]]
   
   for(i in 1:Nsim){ 
-    #create random IDs
-    r.x=runif(Obs)*Randoms.n
-    tx<-round(r.x)
-    
-    #add to observed coordinates
-    CoordsTmp<-data.frame(X=Coord.X,Y=Coord.Y, RandomID=tx)
-    
-    #Sort by random to reallocate the observations
-    CoordsSorted<- CoordsTmp[order(CoordsTmp$RandomID),]
-    
-    #Define new coordinates
-    CoordsNew<-cbind(CoordsSorted$X, CoordsSorted$Y)
-    
-    spGini.SIM<-spGini(CoordsNew,Bandwidth,x,WType)
+   
+    spGini.SIM<-spGini(Coords[sample(nrow(Coords)),],Bandwidth,x,WType)
         
     SIM.m[i,1]<-i
     SIM.m[i,2]<-spGini.SIM[[2]]

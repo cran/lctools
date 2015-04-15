@@ -1,7 +1,6 @@
 lcorrel<-function(DFrame,bw,Coords)
 {  
-  DistanceT<-dist(Coords)
-  Dij<- as.matrix(DistanceT)
+  Dij<- as.matrix(dist(Coords))
   
   Obs<-nrow(DFrame)
   VarNo<-ncol(DFrame)
