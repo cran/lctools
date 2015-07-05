@@ -11,7 +11,6 @@ moransI<-function(Coords,Bandwidth,x,WType='Binary'){
   
   moran_nom<-0.0
   moran_denom<-0.0
-  sum.w<-0.0
   mean.x=mean(x)
    
   Wts<-matrix(data=0,nrow=Obs,ncol=Obs)
@@ -45,13 +44,13 @@ moransI<-function(Coords,Bandwidth,x,WType='Binary'){
       
       if (j!=i){
          moran_nom<-moran_nom + Wts[i,j]*(x[i]-mean.x)*(x[j]-mean.x)
-         sum.w <- sum.w + Wts[i,j] }
-      else{
-        Wts[i,j]<-0}
-    
-     }
+         }
+      }
     moran_denom<-moran_denom + ((x[i]-mean.x)*(x[i]-mean.x))
   }
+  
+  diag(Wts)<-0
+  sum.w=sum(Wts)
   
   Nom<-Obs*moran_nom
   
@@ -66,6 +65,7 @@ moransI<-function(Coords,Bandwidth,x,WType='Binary'){
   #Expected I E(I)
   E.I<-(-1)/(Obs-1)
   
+    
   S0<-sum.w
   
   S1<-(1/2.0) * sum((Wts + t(Wts))^2)

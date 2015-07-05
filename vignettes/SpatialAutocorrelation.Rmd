@@ -4,17 +4,17 @@ author: "Stamatis Kalogirou"
 date: '`r Sys.Date()`'
 output: pdf_document
 vignette: >
-  %\VignetteIndexEntry{Vignette Title} 
-  %\VignetteEngine{knitr::rmarkdown}
-  \usepackage[utf8]{inputenc}
+%\\VignetteIndexEntry{Spatial Autocorrelation}  
+%\\VignetteEngine{knitr::rmarkdown}
+\\usepackage[utf8]{inputenc}
 ---
 
-## Introduction
+# Introduction
 
 Moran's I is one of the oldest statistics used to examine spatial autocorrelation. This global statistic was first proposed by Moran (1948, 1950). Later, Cliff and Ord (1973, 1981) present a comprehensive work on spatial autocorrelation and suggested a formula to calculate the $I$ which is now used in most textbooks and software: $I = \frac{n}{W} \frac{\sum_{i=1}^{n} \sum_{j=1}^{n} w_{ij} z_i z_j} {\sum_{i=1}^{n} z_i^2}$ where $n$ is number of observations, $W$ is the sum of the weights $w_{ij}$ for all pairs in the system, $z_i=x_i - \bar{x}$ where $x$ is the value of the variable at location $i$ and $\bar{x}$ the mean value of the variable in question (Eq. 5.2 Kalogirou, 2003).The implementation here allows only nearest neighbour weighting schemes. Resampling and randomization null hypotheses have been tested following the discussion of Goodchild (1986, pp. 24-26).
 
 
-## Exploring the data
+# Exploring the data
 
 The lctools package has some built in data to allow for practising the various spatial analysis techniques. One of the datasets is GR.Municipalities. The latter is a SpatialPolygonsDataFrame that refers to Municipalities of Greece. The descriptive data for each municipality include demographic and economic variables the source of which are the Population Census of 2001 and the General Secretariat for Information Systems, respectively.
 
@@ -78,7 +78,7 @@ plot(moran[,2], moran[,3], main="Global Moran's I", sub="", xlab="# of neighbour
      ylab="Moran's I")
 ```
 
-## Local Moran's I
+# Local Moran's I
 
 The next step is the calculation of local Moran $I_i$ using the command `l.moransI` as follows:
 
@@ -108,7 +108,7 @@ abline(v=0)
 abline(reg1, col="red")
 ```
 
-## References
+# References
 
 Cliff, A.D., and Ord, J.K., 1973, Spatial autocorrelation (London: Pion).
 

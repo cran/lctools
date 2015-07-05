@@ -1,3 +1,4 @@
 exportPattern("^[[:alpha:]]+")
 importFrom("reshape",melt)
 importFrom("weights",wtd.cor)
+importFrom("stats", "cor", "dist", "p.adjust", "pnorm", "pt", "sd", "setNames", "var")

@@ -9,7 +9,7 @@
   \item{Coords}{a numeric matrix or vector or data frame of two columns giving the X,Y coordinates of the observations (data points or geometric / population weighted centroids)}
   \item{Bandwidth}{a positive integer that defines the number of nearest neighbours for the calculation of the weights}
   \item{x}{a numeric vector of a variable}
-  \item{WType}{string giving the weighting scheme used to compute the weights matrix. 
+  \item{WType}{a string giving the weighting scheme used to compute the weights matrix. 
   Options are: "Binary" and "Bi-square". Default is "Binary".
 
   Binary: weight = 1 for distances less than or equal to the distance of the furthest neighbour (H), 0 otherwise;
@@ -33,7 +33,7 @@
 }
 
 \references{
-Anselin, L., I. Syabri and Y Kho. ,2006, GeoDa: An Introduction to Spatial Data Analysis. Geographical Analysis 38(1), 5-22.
+Anselin, L., I. Syabri and Y Kho., 2006, GeoDa: An Introduction to Spatial Data Analysis. Geographical Analysis 38(1), 5-22.
 
 Bivand et al., 2014, spdep: Spatial dependence: weighting schemes, statistics and models, http://cran.r-project.org/web/packages/spdep/index.html
 
@@ -58,14 +58,14 @@ Paradis et al., 2014, ape: Analyses of Phylogenetics and Evolution, http://cran.
 \examples{
 data(GR.Municipalities)
 attr<-GR.Municipalities@data
-mI<-moransI(cbind(attr$X, attr$Y),6,x<-attr$UnemrT01)
+m.I<-moransI(cbind(attr$X, attr$Y),6,attr$UnemrT01)
 
-mI$Morans.I
-mI$Expected.I
-mI$z.resampling
-mI$p.value.resampling
-mI$z.randomization
-mI$p.value.randomization
+m.I$Morans.I
+m.I$Expected.I
+m.I$z.resampling
+m.I$p.value.resampling
+m.I$z.randomization
+m.I$p.value.randomization
 }
 \keyword{Moran's I}
 \keyword{Moran's I significance test}

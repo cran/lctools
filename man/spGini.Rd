@@ -9,7 +9,7 @@ spGini(Coords, Bandwidth, x, WType = 'Binary')
   \item{Coords}{a numeric matrix or vector or dataf rame of two columns giving the X,Y coordinates of the observations (data points or geometric / population weighted centroids)}
   \item{Bandwidth}{a positive integer that defines the number of nearest neighbours for the calculation of the weights}
   \item{x}{a numeric vector of a variable}
-  \item{WType}{string giving the weighting scheme used to compute the weights matrix. 
+  \item{WType}{a string giving the weighting scheme used to compute the weights matrix. 
   Options are: "Binary", "Bi-square", "RSBi-square". Default is "Binary".
 
   Binary: weight = 1 for distances less than or equal to the distance of the furthest neighbour (H), 0 otherwise;
@@ -17,18 +17,19 @@ spGini(Coords, Bandwidth, x, WType = 'Binary')
   Bi-square: weight = (1-(ndist/H)^2)^2 for distances less than or equal to H, 0 otherwise;
 
   RSBi-square: weight = Bi-square weights / sum (Bi-square weights) for each row in the weights matrix}
-
 }
 
-\value{Returns a list of three values Gini=gGini,gwGini=gwGini,nsGini=nsGini
+\value{Returns a list of five values Gini, gwGini, nsGini, gwGini.frac, nsGini.frac
 
   \item{Gini }{Global Gini}
   \item{gwGini}{First component of the spatial Gini: the inequality among nearest (geographically) neighbours}
   \item{nsGini}{Second component of the spatial Gini: the inequality among non-neighbours}
+  \item{gwGini.frac}{The fraction of the first component of the spatial Gini}
+  \item{nsGini.frac}{The fraction of the second component of the spatial Gini}
 }
 
 \references{
-Rey, S.J., Smith J.S., 2013, A spatial decomposition of the Gini coefficient, Letters in Spatial and Resource Sciences, 6 (2), pp. 55-70.}
+Rey, S.J., Smith, R. J. (2013) A spatial decomposition of the Gini coefficient, Letters in Spatial and Resource Sciences, 6 (2), pp. 55-70.}
 
 \author{Stamatis Kalogirou <skalo@hua.gr>}
 

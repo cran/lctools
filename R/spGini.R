@@ -35,18 +35,31 @@ spGini<-function(Coords,Bandwidth,x,WType='Binary'){
           Wts[m,j]<-(1-(DataSet$DNeighbour[j]/Kernel_H)^2)^2}
         else{
           Wts[m,j]<-1}
-        }
-      if(WType=='RSBi-square'){Wts[m,]<-Wts[m,]/sum(Wts[m,])}
-        
-      gGini_nom<-gGini_nom+abs(x[m]-x[j])
+      }
       
-      gwGini_nom<-gwGini_nom+Wts[m,j]*abs(x[m]-x[j])
-      
-      nsGini_nom<-nsGini_nom+(1-Wts[m,j])*abs(x[m]-x[j])
+      if (j==m){
+        Wts[m,j]<-0
+      }
     }
+    if(WType=='RSBi-square'){Wts[m,]<-Wts[m,]/sum(Wts[m,])}
+    
+    for(j in 1:Obs){
+      
+    gGini_nom<-gGini_nom+abs(x[m]-x[j])
+    
+    gwGini_nom<-gwGini_nom+Wts[m,j]*abs(x[m]-x[j])
+    
+    nsGini_nom<-nsGini_nom+(1-Wts[m,j])*abs(x[m]-x[j])
+    }
+    
   }
   
   Denom<-2*(Obs^2)*mean(x)
   
-  return(c(Gini=gGini_nom/Denom,gwGini=gwGini_nom/Denom,nsGini=nsGini_nom/Denom))
+  Gini<-gGini_nom/Denom
+  gwGini=gwGini_nom/Denom
+  nsGini=(gGini_nom - gwGini_nom)/Denom
+  
+  return(c(Gini=Gini,gwGini=gwGini,nsGini=nsGini,gwGini.frac=gwGini/Gini, nsGini.frac=nsGini/Gini))
+  
 }

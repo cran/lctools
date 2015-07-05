@@ -11,8 +11,8 @@ The main purpose of lctools is to assist spatial analysis researchers and educat
 \tabular{ll}{
 Package: \tab lctools\cr
 Type: \tab Package\cr
-Version: \tab 0.2-2\cr
-Date: \tab 2015-04-15\cr
+Version: \tab 0.2-3\cr
+Date: \tab 2015-07-05\cr
 License: \tab GPL (>= 2)
 }
   
@@ -22,19 +22,19 @@ Stamatis Kalogirou
 
 Maintainer: Stamatis Kalogirou <skalo@hua.gr}
 
-\note{Acknowledgement: I am grateful to the University of Luxembourg and would like to personally thank Ass. Professor Geoffrey Caruso and Professor Christian Schulz for their support during my research visit at the Institute of Geography and Spatial Planning (Sept. 2013 - Feb. 2014) where this package was originally developed.}
+\note{Acknowledgement: I am grateful to the University of Luxembourg and would like to personally thank Ass. Professor Geoffrey Caruso, Professor Markus Hesse and Professor Christian Schulz for their support during my research visit at the Institute of Geography and Spatial Planning (Sept. 2013 - Feb. 2014) where this package was originally developed.}
 
 \references{
 Hope, A.C.A. (1968) A Simplified Monte Carlo Significance Test Procedure, Journal of the Royal Statistical Society. Series B (Methodological), 30 (3), pp. 582 - 598.
 
-Kalogirou, S., 2003, The Statistical Analysis And Modelling Of Internal Migration Flows Within England And Wales, PhD Thesis, School of Geography, Politics and Sociology, University of Newcastle upon Tyne, UK.
+Kalogirou, S. (2003) The Statistical Analysis And Modelling Of Internal Migration Flows Within England And Wales, PhD Thesis, School of Geography, Politics and Sociology, University of Newcastle upon Tyne, UK.
 
 Kalogirou, S. (2012) Testing local versions of correlation coefficients, Review of Regional Research - Jahrbuch fur Regionalwissenschaft, 32, 1, pp. 45 - 61, doi: 10.1007/s10037-011-0061-y.
 
 Kalogirou, S. (2013) Testing geographically weighted multicollinearity diagnostics, GISRUK 2013, Department of Geography and Planning, School of Environmental Sciences, University of Liverpool, Liverpool, UK, 3-5 April 2013.
 \url{http://gisc.gr/docs/sk_papers/2_7_Kalogirou_2013.pdf}
 
-Rey, S.J., Smith J.S., 2013, A spatial decomposition of the Gini coefficient, Letters in Spatial and Resource Sciences, 6 (2), pp. 55-70.}
+Rey, S.J., Smith, R.J. (2013) A spatial decomposition of the Gini coefficient, Letters in Spatial and Resource Sciences, 6 (2), pp. 55-70.}
 
 \keyword{package}
 \keyword{spatial analysis}

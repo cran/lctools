@@ -4,11 +4,11 @@ author: "Stamatis Kalogirou"
 date: '`r Sys.Date()`'
 output: pdf_document
 vignette: >
-  %\VignetteIndexEntry{Vignette Title}  
+  %\VignetteIndexEntry{Spatial Inequalities with R}  
   %\VignetteEngine{knitr::rmarkdown}
    \usepackage[utf8]{inputenc}
 ---
-## Introduction
+# Introduction
 
 This is a quick presentation for calculating the spatial decomposition of the Gini coefficient (Rey and Smith, 2013) in R with the package `lctools`. For more details about lctools see <http://cran.r-project.org/web/packages/lctools/index.html>. Please make sure that the R packages lctools and rgdal have been installed. 
 
@@ -20,7 +20,7 @@ data(GR.Municipalities)
 names(GR.Municipalities@data)
 ```
 
-## Analysis
+# Analysis
 
 Out of the above 14 variables, _X,Y_ are the geographical coordinates of the municipalities' centroids that will help calculating the distance matrix and then the weights matrix based on a fixed number of nearest neighbours; and _Income01_ is the variable to be analysed and refers to the mean annual recorded income in 2001 (in Euros)
 
@@ -44,6 +44,6 @@ spGini.Sim20$pseudo.p
 Since the pseudo p-value is 0.05 for 19 permutations, it can be argued that the terms of the spatial Gini coefficient are significant at the 95% level. This level of significance can be increased if more permutations are tested (eg 99, 999 etc.).
 
 
-## References
+# References
 
-Rey, S.J., Smith J.S., 2013, A spatial decomposition of the Gini coefficient, Letters in Spatial and Resource Sciences, 6 (2), pp. 55-70.
+Rey, S.J., Smith, R.J. , 2013, A spatial decomposition of the Gini coefficient, Letters in Spatial and Resource Sciences, 6 (2), pp. 55-70.
