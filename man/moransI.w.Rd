@@ -50,16 +50,18 @@ Paradis et al., 2014, ape: Analyses of Phylogenetics and Evolution, http://cran.
 
 \examples{
 data(GR.Municipalities)
-attr<-GR.Municipalities@data
-w<-w.matrix(cbind(attr$X, attr$Y),6)
-mI<-moransI.w(attr$UnemrT01,w)
+attr <- GR.Municipalities@data
 
-mI$Morans.I
-mI$Expected.I
-mI$z.resampling
-mI$p.value.resampling
-mI$z.randomization
-mI$p.value.randomization
+#using an adaptive kernel
+w.ad <- w.matrix(cbind(attr$X, attr$Y),6)
+mI.ad <- moransI.w(attr$UnemrT01,w.ad)
+as.data.frame(mI.ad)
+
+
+#using a fixed kernel
+w.fixed<-w.matrix(cbind(attr$X, attr$Y), 50000, WType='Binary', family='fixed')
+mI.fixed<-moransI.w(attr$UnemrT01,w.fixed)
+as.data.frame(mI.fixed)
 }
 
 \keyword{Moran's I}

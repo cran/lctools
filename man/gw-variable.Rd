@@ -26,7 +26,7 @@ Kalogirou, S., 2003, The Statistical Analysis And Modelling Of Internal Migratio
 }
 \author{Stamatis Kalogirou <skalo@hua.gr>}
 
-\note{This code has been tested with Cartesian coordinates for the distances to be measured in meters. In the sample dataset GreeceLAs the projection used is the EPSG:2100 (GGRS87 / Greek Grid)}
+\note{This code has been tested with Cartesian coordinates for the distances to be measured in meters. In the sample dataset GR.Municipalities the projection used is the EPSG:2100 (GGRS87 / Greek Grid)}
 
 \examples{
 data(GR.Municipalities)

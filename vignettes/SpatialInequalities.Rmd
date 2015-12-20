@@ -6,7 +6,7 @@ output: pdf_document
 vignette: >
   %\VignetteIndexEntry{Spatial Inequalities with R}  
   %\VignetteEngine{knitr::rmarkdown}
-   \usepackage[utf8]{inputenc}
+  %\VignetteEncoding{UTF-8}
 ---
 # Introduction
 
@@ -32,7 +32,8 @@ myDF[!complete.cases(myDF),]
 myDF.new<-na.omit(myDF)
 bw<-12
 wt<-'Binary'
-spGini(myDF.new[,2:3],bw,myDF.new[,1],wt)
+sp.G<-spGini(myDF.new[,2:3],bw,myDF.new[,1],wt)
+knitr::kable(sp.G, format = "pandoc", digits = 5)
 ```
 
 The overall Gini coefficient suggests that there is inequality among municipalities in terms of the mean annual recorded income. The first term of the spatially disaggregated Gini suggests that neighbour municipalities have rather similar level of income, whereas the second term suggests that most of the inequality is due to non-neighbours inequality. To test if this finding is significant, one can run a Monte Carlo simulation:
@@ -45,5 +46,7 @@ Since the pseudo p-value is 0.05 for 19 permutations, it can be argued that the 
 
 
 # References
+
+Kalogirou, S., 2015, Spatial Analysis: Methodology and Applications with R. Athens. ISBN: 978-960-603-285-1 (in Greek)
 
 Rey, S.J., Smith, R.J. , 2013, A spatial decomposition of the Gini coefficient, Letters in Spatial and Resource Sciences, 6 (2), pp. 55-70.

@@ -30,7 +30,7 @@
 The X,Y coordinates refer to the geometric centroids of the new 325 Municipalities in Greece (Programme Kallikratis) in 2011. The boundary data of the original shapefile have been simplified to reduce its detail and size. The polygon referring to Mount Athos has been removed as there is no data available for this politically autonomous area of Greece.
 }
 \source{
-The shapefile of the corresponding polygons is available from the Hellenic Statistical Authority (EL.STAT.) at \url{http://www.statistics.gr/portal/page/portal/ESYE/PAGE-maps}. The population, employment, citizenship and employment sector data is available from the Hellenic Statistical Authority (EL.STAT.) at \url{http://www.statistics.gr} but were aggregated to the new municipalities by the author. The income data are available from the General Secretariat of Information Systems in Greece at \url{http://www.gsis.gr/} at the postcode level of geography and were aggregated to the new municipalities by the author.
+The shapefile of the corresponding polygons is available from the Hellenic Statistical Authority (EL.STAT.) at \url{http://www.statistics.gr/el/digital-cartographical-data}. The population, employment, citizenship and employment sector data is available from the Hellenic Statistical Authority (EL.STAT.) at \url{http://www.statistics.gr/en/home} but were aggregated to the new municipalities by the author. The income data are available from the General Secretariat of Information Systems in Greece at \url{http://www.gsis.gr/} at the postcode level of geography and were aggregated to the new municipalities by the author.
 }
 \references{
 Kalogirou, S., and Hatzichristos, T. (2007). A spatial modelling framework for income estimation. Spatial Economic Analysis, 2(3), 297-316. 
@@ -46,3 +46,5 @@ boxplot(GR.Municipalities@data$Income01)
 hist(GR.Municipalities@data$PrSect01)
 }
 \keyword{datasets}
+\keyword{Greek Municipalities}
+\keyword{geographical boundaries}

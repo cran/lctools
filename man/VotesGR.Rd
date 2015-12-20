@@ -20,7 +20,7 @@
 \details{
 The X,Y coordinates refer to the geometric centroids of the 51 Prefectures in Greece in 2011. All electoral districts in the Attica Region have been merged to one. The two electoral regions in Thessaloniki have also been merged to a single region matching the NUTS II regions geography.
 }
-\source{The shapefile of the corresponding polygons is available from the Public Open Data of the Greek Government at \url{http://geodata.gov.gr/geodata}. The election results (votes) are available from the Hellenic Ministry of Interior at \url{http://www.ypes.gr/en/Elections/NationalElections/Results/}.
+\source{The shapefile of the corresponding polygons is available from the Public Open Data of the Greek Government at \url{http://geodata.gov.gr/en/dataset/oria-nomon-okkhe}. The election results (votes) are available from the Hellenic Ministry of Interior at \url{http://www.ypes.gr/en/Elections/NationalElections/Results/}.
 }
 \references{
 Paper in preparation to be presented in the 10th International Congress of the Hellenic Geographical Society, Thessaloniki, 22-24/10/2014}

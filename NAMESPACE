@@ -1,4 +1,8 @@
 exportPattern("^[[:alpha:]]+")
 importFrom("reshape",melt)
 importFrom("weights",wtd.cor)
-importFrom("stats", "cor", "dist", "p.adjust", "pnorm", "pt", "sd", "setNames", "var")
+importFrom("pscl",zeroinfl)
+importFrom("MASS",ginv)
+importFrom("graphics", "plot")
+importFrom("stats", "cor", "dist", "p.adjust", "pnorm", "pt", "sd", "setNames", 
+           "var", "AIC", "deviance", "optim", "rnorm", "rpois", "runif")

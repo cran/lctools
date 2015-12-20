@@ -22,12 +22,14 @@ acc(X, Y, Pop, Power=1)
 }
 
 \references{
-Kalogirou, S., 2003, The Statistical Analysis And Modelling Of Internal Migration Flows Within England And Wales, PhD Thesis, School of Geography, Politics and Sociology, University of Newcastle upon Tyne, UK. URL: \url{https://theses.ncl.ac.uk/dspace/handle/10443/204} 
+Kalogirou, S., 2003, The Statistical Analysis and Modelling of Internal Migration Flows within England and Wales, PhD Thesis, School of Geography, Politics and Sociology, University of Newcastle upon Tyne, UK. URL: \url{https://theses.ncl.ac.uk/dspace/handle/10443/204} 
+
+Kalogirou, S., 2015, Destination Choice of Athenians: an application of geographically weighted versions of standard and zero inflated Poisson spatial interaction models, Geographical Analysis, Online First.
 }
 
 \author{Stamatis Kalogirou <skalo@hua.gr>}
 
-\note{X,Y should be Cartesian coordinates for the distances to be measured in meters. In the sample dataset GreeceLAs the projection used is the EPSG:2100 (GGRS87 / Greek Grid)}
+\note{X,Y should be Cartesian coordinates for the distances to be measured in meters. In the sample dataset GR.Municipalities the projection used is the EPSG:2100 (GGRS87 / Greek Grid)}
 
 \examples{
 data(GR.Municipalities)
@@ -37,3 +39,4 @@ aMeasure<-acc(attr$X[1:100], attr$Y[1:100],attr$PopTot01[1:100],1)
 
 \keyword{accessibility}
 \keyword{centrality}
+\keyword{Competing Destinations Model}

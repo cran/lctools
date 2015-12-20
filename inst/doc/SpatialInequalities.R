@@ -9,7 +9,8 @@ myDF[!complete.cases(myDF),]
 myDF.new<-na.omit(myDF)
 bw<-12
 wt<-'Binary'
-spGini(myDF.new[,2:3],bw,myDF.new[,1],wt)
+sp.G<-spGini(myDF.new[,2:3],bw,myDF.new[,1],wt)
+knitr::kable(sp.G, format = "pandoc", digits = 5)
 
 ## ----warning = FALSE-----------------------------------------------------
 spGini.Sim20<-mc.spGini(Nsim=19,bw,myDF.new[,1],myDF.new[,2],myDF.new[,3],wt)

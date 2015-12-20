@@ -21,7 +21,7 @@ the reference economy, respectively.}
 }
 }
 \value{
-FLQ returns a list of 2 vectors
+FLQ returns a list of 2 vectors:
   \item{LQ}{A numeric vector with the Location Quotient values}
   \item{FLQ}{A numeric vector with the Focal Location Quotient values}
 }
