@@ -22,7 +22,8 @@ Fotheringham, A.S., Barmby, T., Brunsdon, C., Champion, T., Charlton, M., Kalogi
 
 Fotheringham, A.S., Rees, P., Champion, T., Kalogirou, S., and Tremayne, A.R., 2004, The Development of a Migration Model for England and Wales: Overview and Modelling Out-migration, Environment and Planning A, 36, pp. 1633 - 1672. doi:10.1068/a36136
 
-Kalogirou, S., 2003, The Statistical Analysis And Modelling Of Internal Migration Flows Within England And Wales, PhD Thesis, School of Geography, Politics and Sociology, University of Newcastle upon Tyne, UK. URL: \url{https://theses.ncl.ac.uk/dspace/handle/10443/204} 
+Kalogirou, S. (2003) The Statistical Analysis And Modelling Of Internal Migration Flows Within England And Wales, PhD Thesis, School of Geography, Politics and Sociology, University of Newcastle upon Tyne, UK. \url{http://gisc.gr/?mdocs-file=1245&mdocs-url=false}
+
 }
 \author{Stamatis Kalogirou <skalo@hua.gr>}
 

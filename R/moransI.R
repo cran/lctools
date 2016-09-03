@@ -1,4 +1,4 @@
-moransI<-function(Coords,Bandwidth,x,WType='Binary'){
+moransI <- function(Coords, Bandwidth, x, WType='Binary'){
 
   Distances<-dist(Coords)
   Dij <- as.matrix(Distances)

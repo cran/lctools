@@ -4,10 +4,10 @@
 \title{Local Moran's I classic statistic for assessing spatial autocorrelation}
 
 \description{
-The local Moran's I proposed by Anselin (1995). The formula to calculate the local I_i which is now used in most textbooks and software is: \deqn{I_i = ((x_i - mean(x))/m_2)*(\Sigma w_{ij}*z_j)} where n is number of observations, w_ij are the weights, z_j=x_j - mean(x), x being the value of the variable at location i and mean(x) being the mean value of the variable in question, and \deqn{m_2 = (\Sigma (x_i - mean(x))^2) / n }
+The local Moran's I proposed by Anselin (1995). The formula to calculate the local I_i which is now used in most textbooks and software is: \deqn{I_i = ((x_i - mean(x))/m_2)*(\Sigma w_{ij}*z_j)} where n is number of observations, w_ij are the weights, z_j=x_j - mean(x), x being the value of the variable at location i and mean(x) being the mean value of the variable in question, and \deqn{m_2 = (\Sigma (x_i - mean(x))^2) / n . This function calculates the local Moran's I values for each observation along with goodness of fit statistics, it classifies the observations into five classes (High-High, Low-Low, Low-High, High-Low, and Not Significant) and optionally plots a Moran's I Scatter Plot.}
 }
 
-\usage{l.moransI(Coords, Bandwidth, x, WType='Binary')
+\usage{l.moransI(Coords, Bandwidth, x, WType='Binary', scatter.plot = TRUE)
 }
 \arguments{
   \item{Coords}{a numeric matrix or vector or data frame of two columns giving the X,Y coordinates of the observations (data points or geometric / population weighted centroids)}
@@ -19,6 +19,7 @@ The local Moran's I proposed by Anselin (1995). The formula to calculate the loc
   Binary: weight = 1 for distances less than or equal to the distance of the furthest neighbour (H), 0 otherwise;
 
   Bi-square: weight = (1-(ndist/H)^2)^2 for distances less than or equal to H, 0 otherwise.}
+  \item{scatter.plot}{a logical value that controls if the Moran's I Scatter Plot will be displayed (TRUE) or not. Default is TRUE.}
 }
 \details{The interpretation of the local I_i is similar to that of the global Moran's I.}
 
@@ -39,6 +40,8 @@ The local Moran's I proposed by Anselin (1995). The formula to calculate the loc
 Anselin, L.,1995, Local Indicators of Spatial Association-LISA. Geographical Analysis, 27, 93-115. 
 
 Anselin, L., Syabri, I. and Kho., Y., 2006, GeoDa: An Introduction to Spatial Data Analysis. Geographical Analysis 38(1), 5-22.
+
+Kalogirou, S. (2015) Spatial Analysis: Methodology and Applications with R. [ebook] Athens: Hellenic Academic Libraries Link. ISBN: 978-960-603-285-1 (in Greek). \url{https://repository.kallipos.gr/handle/11419/5029?locale=en}
 }
 \author{Stamatis Kalogirou <skalo@hua.gr>}
 
@@ -47,7 +50,6 @@ Anselin, L., Syabri, I. and Kho., Y., 2006, GeoDa: An Introduction to Spatial Da
 \examples{
 data(GR.Municipalities)
 l.moran<-l.moransI(cbind(GR.Municipalities$X, GR.Municipalities$Y),6,GR.Municipalities$Income01)
-boxplot(l.moran$Ii)
 }
 \keyword{local Moran's I}
 \keyword{Moran's I Clusters}

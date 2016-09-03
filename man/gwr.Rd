@@ -26,7 +26,7 @@ The Geographically Weighted Regression (GWR) is a method of local regression int
 \references{
 Fotheringham, A.S., Brunsdon, C., Charlton, M. (2000). Geographically Weighted Regression: the analysis of spatially varying relationships. John Wiley and Sons, Chichester.
 
-Kalogirou, S. (2003) The Statistical Analysis And Modelling Of Internal Migration Flows Within England And Wales, PhD Thesis, School of Geography, Politics and Sociology, University of Newcastle upon Tyne, UK.
+Kalogirou, S. (2003) The Statistical Analysis and Modelling of Internal Migration Flows within England and Wales, PhD Thesis, School of Geography, Politics and Sociology, University of Newcastle upon Tyne, UK. \url{http://gisc.gr/?mdocs-file=1245&mdocs-url=false}
 }
 
 \author{Stamatis Kalogirou <skalo@hua.gr>}

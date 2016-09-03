@@ -21,9 +21,9 @@ The Generalised Geographically Weighted Regression is a method recently proposed
 }
 
 \references{
-Kalogirou, S. (2003) The Statistical Analysis and Modelling of Internal Migration Flows within England and Wales, PhD Thesis, School of Geography, Politics and Sociology, University of Newcastle upon Tyne, UK.
+Kalogirou, S. (2003) The Statistical Analysis and Modelling of Internal Migration Flows within England and Wales, PhD Thesis, School of Geography, Politics and Sociology, University of Newcastle upon Tyne, UK. \url{http://gisc.gr/?mdocs-file=1245&mdocs-url=false}
 
-Kalogirou, S. (2015) Destination Choice of Athenians: an application of geographically weighted versions of standard and zero inflated Poisson spatial interaction models, Geographical Analysis, On line first. DOI: 10.1111/gean.12092
+Kalogirou, S. (2016) Destination Choice of Athenians: an application of geographically weighted versions of standard and zero inflated Poisson spatial interaction models, Geographical Analysis, 48(2),pp. 191-230. DOI: 10.1111/gean.12092 \url{http://onlinelibrary.wiley.com/doi/10.1111/gean.12092/abstract}
 }
 
 \author{Stamatis Kalogirou <skalo@hua.gr>}

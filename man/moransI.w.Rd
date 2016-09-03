@@ -23,6 +23,9 @@ moransI.w(x, w)
   \item{p.value.resampling}{The p-value (two-tailed) calculated for the resampling null hypotheses test}
   \item{p.value.randomization}{The p-value (two-tailed) calculated for the randomization null hypotheses test}
 }
+
+\note{I would like to acknowledge the use of some lines of code from the file MoranI.R of the package ape and I would like to thank Paradis et al. (2016) and all authors involved in the Moran's I function for this.}
+
 \references{
 Anselin, L., I. Syabri and Y Kho., 2006, GeoDa: An Introduction to Spatial Data Analysis. Geographical Analysis 38(1), 5-22.
 
@@ -38,9 +41,11 @@ Moran, P.A.P., 1948, The interpretation of statistical maps, Journal of the Roya
 
 Moran, P.A.P., 1950, Notes on continuous stochastic phenomena, Biometrika, 37, pp. 17 - 23.
 
-Kalogirou, S., 2003, The Statistical Analysis And Modelling Of Internal Migration Flows Within England And Wales, PhD Thesis, School of Geography, Politics and Sociology, University of Newcastle upon Tyne, UK. URL: \url{https://theses.ncl.ac.uk/dspace/handle/10443/204}
+Kalogirou, S. (2003) The Statistical Analysis and Modelling of Internal Migration Flows within England and Wales, PhD Thesis, School of Geography, Politics and Sociology, University of Newcastle upon Tyne, UK. \url{http://gisc.gr/?mdocs-file=1245&mdocs-url=false}
 
-Paradis et al., 2014, ape: Analyses of Phylogenetics and Evolution, http://cran.r-project.org/web/packages/ape/index.html
+Kalogirou, S. (2015) Spatial Analysis: Methodology and Applications with R. [ebook] Athens: Hellenic Academic Libraries Link. ISBN: 978-960-603-285-1 (in Greek). \url{https://repository.kallipos.gr/handle/11419/5029?locale=en}
+
+Paradis et al., 2016, ape: Analyses of Phylogenetics and Evolution, \url{http://ape-package.ird.fr/}
 }
 \author{Stamatis Kalogirou <skalo@hua.gr>}
 

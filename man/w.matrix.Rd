@@ -31,7 +31,7 @@ w.matrix(Coords, Bandwidth, WType = "Binary", family = "adaptive")
   A matrix of weights
 }
 \references{
-Kalogirou, S., 2003, The Statistical Analysis And Modelling Of Internal Migration Flows Within England And Wales, PhD Thesis, School of Geography, Politics and Sociology, University of Newcastle upon Tyne, UK. URL: \url{https://theses.ncl.ac.uk/dspace/handle/10443/204}
+Kalogirou, S. (2003) The Statistical Analysis and Modelling of Internal Migration Flows within England and Wales, PhD Thesis, School of Geography, Politics and Sociology, University of Newcastle upon Tyne, UK. \url{http://gisc.gr/?mdocs-file=1245&mdocs-url=false}
 }
 \author{Stamatis Kalogirou <skalo@hua.gr>}
 

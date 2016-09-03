@@ -27,6 +27,8 @@ FLQ returns a list of 2 vectors:
 }
 \references{
 Cromley, R. G. and Hanink, D. M. (2012), Focal Location Quotients: Specification and Application, Geographical Analysis, 44 (4), pp. 398-410. doi: 10.1111/j.1538-4632.2012.00852.x
+
+Kalogirou, S. (2015) Spatial Analysis: Methodology and Applications with R. [ebook] Athens: Hellenic Academic Libraries Link. ISBN: 978-960-603-285-1 (in Greek). \url{https://repository.kallipos.gr/handle/11419/5029?locale=en}
 }
 \author{Stamatis Kalogirou <skalo@hua.gr>}
 

@@ -1,4 +1,4 @@
-l.moransI<-function(Coords, Bandwidth, x, WType='Binary'){
+l.moransI<-function(Coords, Bandwidth, x, WType='Binary', scatter.plot = TRUE){
 
   Distances<-dist(Coords)
   Dij <- as.matrix(Distances)
@@ -115,6 +115,25 @@ l.moransI<-function(Coords, Bandwidth, x, WType='Binary'){
   }
  
   Results<-data.frame(ID=c(1:Obs),Ii=l.moran[,1], Ei=l.moran[,2],Vi=l.moran[,3], Zi=l.moran[,4],p.value=l.moran[,5], Xi=l.moran[,6],wXj=l.moran[,7], Cluster=l.moran[,8])
+  
+  if (scatter.plot == TRUE){
+    
+    xmin <- round(ifelse(abs(min(Results[,7])) > abs(min(Results[,8])), abs(min(Results[,7])), 
+                       abs(min(Results[,8]))))
+    xmax <- round(ifelse(abs(max(Results[,7])) > abs(max(Results[,8])), abs(max(Results[,7])), 
+                       abs(max(Results[,8]))))
+    xmax <-ifelse(xmin>xmax,xmin,xmax)+1
+    ymax <-xmax
+    xmin <- -xmax
+    ymin <- -ymax
+    reg1 <- lm(Results[,8]~Results[,7])
+    
+    plot(Results[,7], Results[,8], main="Moran's I Scatter Plot", sub="", xlab=deparse(substitute(x)), 
+         ylab=paste("lagged",deparse(substitute(x)), sep=" "), xlim=c(xmin, xmax), ylim=c(ymin, ymax))
+    abline(h=0)
+    abline(v=0)
+    abline(reg1, col="red")
+  }
   
   return(Results)
 }

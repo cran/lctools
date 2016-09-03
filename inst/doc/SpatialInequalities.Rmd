@@ -47,6 +47,6 @@ Since the pseudo p-value is 0.05 for 19 permutations, it can be argued that the 
 
 # References
 
-Kalogirou, S., 2015, Spatial Analysis: Methodology and Applications with R. Athens. ISBN: 978-960-603-285-1 (in Greek)
+Kalogirou, S., 2015, Spatial Analysis: Methodology and Applications with R. [ebook] Athens: Hellenic Academic Libraries Link. ISBN: 978-960-603-285-1 (in Greek).  \url{https://repository.kallipos.gr/handle/11419/5029?locale=en}
 
 Rey, S.J., Smith, R.J. , 2013, A spatial decomposition of the Gini coefficient, Letters in Spatial and Resource Sciences, 6 (2), pp. 55-70.

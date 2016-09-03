@@ -23,7 +23,8 @@ The X,Y coordinates refer to the geometric centroids of the 51 Prefectures in Gr
 \source{The shapefile of the corresponding polygons is available from the Public Open Data of the Greek Government at \url{http://geodata.gov.gr/en/dataset/oria-nomon-okkhe}. The election results (votes) are available from the Hellenic Ministry of Interior at \url{http://www.ypes.gr/en/Elections/NationalElections/Results/}.
 }
 \references{
-Paper in preparation to be presented in the 10th International Congress of the Hellenic Geographical Society, Thessaloniki, 22-24/10/2014}
+Georganos, S., Kalogirou, S. (2014) Spatial analysis of voting patterns of national elections in Greece, 10th International Congress of the Hellenic Geographical Society,  Aristotle University of Thessaloniki, Thessaloniki 22-24 October 2014.
+}
 \examples{
 data(VotesGR)
 plot(VotesGR$NDJune12,VotesGR$NDMay12)

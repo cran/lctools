@@ -1,24 +1,40 @@
 moransI.w <- function(x, w){
 
-    Obs <- length(x)
-    n <- Obs
-    mean.x <- mean(x)
+    # Obs <- length(x)
+    # n <- Obs
+    # mean.x <- mean(x)
+    # 
+    # Xi <- x-mean.x
+    # Xi.sqr <- Xi^2
+    # Z <- matrix(rep((Xi),Obs),Obs,Obs)
+    # Z.T <- t(Z)
+    # 
+    # diag(w)<-0
+    # 
+    # moran.nom.x <- sum(w*Z*Z.T)
+    # moran.denom.x <- sum(Xi.sqr)
+    # 
+    # moran <- (n/sum(w))*(moran.nom.x/moran.denom.x)
+    
+  n <- length(x)
+  mean.x <- mean(x)
+  Zi <- x - mean.x
   
-    Xi <- x-mean.x
-    Xi.sqr <- Xi*Xi
-    Z <- matrix(rep((Xi),Obs),Obs,Obs)
-    Z.T <- t(Z)
+  diag(w)<-0
   
-    diag(w)<-0
+  RS<-apply(w,1,sum)
   
-    moran.nom.x <- sum(w*Z*Z.T)
-    moran.denom.x <- sum(Xi.sqr)
+  ## The following two lines as well as some other code here has been adapted from package 'ape'
+  ## ape: 'the following is useful if an observation has no "neighbour":'
+  RS[RS == 0] <- 1
+  w <- w/RS # ape: 'RS is properly recycled'
   
-    moran <- (Obs/sum(w))*(moran.nom.x/moran.denom.x)
-  
+  moran.nom.x <-sum(w * Zi %*% t(Zi))
+  moran.denom.x <- sum(Zi^2)
+  moran <- (n/sum(w))*(moran.nom.x/moran.denom.x)
   
     #Expected I E(I)
-    E.I <- (-1)/(Obs-1)
+    E.I <- (-1)/(n-1)
   
     S0 <- sum(w)
     
@@ -38,7 +54,7 @@ moransI.w <- function(x, w){
     pv.resampling <- 2*pnorm(-abs(Z.I.resampling))
     pv.randomization <- 2*pnorm(-abs(Z.I.randomization))
     
-    Results <- list(Morans.I=moran, Expected.I=E.I, z.resampling=Z.I.resampling,z.randomization=Z.I.randomization, 
-                    p.value.resampling=pv.resampling,p.value.randomization=pv.randomization)
+    Results <- list(Morans.I=moran, Expected.I=E.I, z.resampling=Z.I.resampling, p.value.resampling=pv.resampling,
+                    z.randomization=Z.I.randomization, p.value.randomization=pv.randomization)
     
 }
