@@ -17,16 +17,16 @@ gw.zi <- function(formula, family, dframe, bw, kernel, coords)
     }
   }
 
-  Gl.Model<-eval(substitute(zeroinfl(formula, data = dframe, dist=family)))
+  Gl.Model <- eval(substitute(zeroinfl(formula, data = dframe, dist=family)))
   
-  RNames<-names(Gl.Model$coefficients$count)
-  CountNames<-paste("CM",RNames, sep="_")
-  ZeroNames<-paste("ZM",RNames, sep="_")
-  PValueNames<-paste("P",RNames, sep="_")
-  PValueNamesCount<-paste("P_CM",RNames, sep="_")
-  PValueNamesZero<-paste("P_ZM",RNames, sep="_")
+  RNames <- names(Gl.Model$coefficients$count)
+  CountNames <- paste("CM",RNames, sep="_")
+  ZeroNames <- paste("ZM",RNames, sep="_")
+  PValueNames <- paste("P",RNames, sep="_")
+  PValueNamesCount <- paste("P_CM",RNames, sep="_")
+  PValueNamesZero <- paste("P_ZM",RNames, sep="_")
   
-  ModelVarNo<-length(Gl.Model$coefficients$count)
+  ModelVarNo <- length(Gl.Model$coefficients$count)
   
   cat("\nNumber of Variables:", ModelVarNo-1)
   cat("\n--------------- Global Model Summary ---------------\n")

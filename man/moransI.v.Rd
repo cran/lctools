@@ -1,7 +1,7 @@
 \name{moransI.v}
 \alias{moransI.v}
 \title{Computes a vector of Moran's I statistics.}
-\description{Moran's I is one of the oldest statistics used to examine spatial autocorrelation. This global statistic was first proposed by Moran (1948, 1950). Later, Cliff and Ord (1973, 1981) present a comprehensive work on spatial autocorrelation and suggested a formula to calculate the I which is now used in most textbooks and software: \deqn{I = (n/W)*(\Sigma \Sigma w_{ij}*z_i*z_j/ \Sigma z_i^2)} where n is number of observations, W is the sum of the weights w_ij for all pairs in the system, z_i=x_i - mean(x) where x is the value of the variable at location i and mean(x) the mean value of the variable in question (Eq. 5.2 Kalogirou, 2003).
+\description{Moran's I is one of the oldest statistics used to examine spatial autocorrelation. This global statistic was first proposed by Moran (1948, 1950). Later, Cliff and Ord (1973, 1981) present a comprehensive work on spatial autocorrelation and suggested a formula to calculate the I which is now used in most textbooks and software: \deqn{I = (n/W)*(\Sigma \Sigma w_{ij}*z_i*z_j/ \Sigma z_i^2)} where n is number of observations, W is the sum of the weights w_ij for all pairs in the system, \eqn{z_i=x_i - mean(x)} where x is the value of the variable at location i and mean(x) the mean value of the variable in question (Eq. 5.2 Kalogirou, 2003).
 
 This function allows the computation of an number of Moran's I statistics of the same family (fixed or adaptive) with different kernel size. To achieve this it first computes the weights matrix using the w.matrix function and then computes the Moran's I using the moransI.w function for each kernel. The function returns a table with the results and a simple scatter plot with the Moran's I and the kernel size. The latter can be disabled by the user.}
 
@@ -59,7 +59,7 @@ Kalogirou, S. (2003) The Statistical Analysis and Modelling of Internal Migratio
 
 Kalogirou, S. (2015) Spatial Analysis: Methodology and Applications with R. [ebook] Athens: Hellenic Academic Libraries Link. ISBN: 978-960-603-285-1 (in Greek). \url{https://repository.kallipos.gr/handle/11419/5029?locale=en}
 }
-\author{Stamatis Kalogirou <skalo@hua.gr>}
+\author{Stamatis Kalogirou <stamatis@lctools.science>}
 
 \seealso{
 \code{\link{moransI.w}}, \code{\link{w.matrix}}

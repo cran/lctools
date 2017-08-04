@@ -33,7 +33,7 @@ w.matrix(Coords, Bandwidth, WType = "Binary", family = "adaptive")
 \references{
 Kalogirou, S. (2003) The Statistical Analysis and Modelling of Internal Migration Flows within England and Wales, PhD Thesis, School of Geography, Politics and Sociology, University of Newcastle upon Tyne, UK. \url{http://gisc.gr/?mdocs-file=1245&mdocs-url=false}
 }
-\author{Stamatis Kalogirou <skalo@hua.gr>}
+\author{Stamatis Kalogirou <stamatis@lctools.science>}
 
 \seealso{
  \code{\link{moransI.w}}, \code{\link{spGini.w}}

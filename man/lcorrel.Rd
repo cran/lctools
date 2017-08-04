@@ -31,7 +31,7 @@ Kalogirou, S. (2013) Testing geographically weighted multicollinearity diagnosti
 
 Kalogirou, S. (2015) A spatially varying relationship between the proportion of foreign citizens and income at local authorities in Greece, 10th International Congress of the Hellenic Geographical Society,  Aristotle University of Thessaloniki, Thessaloniki 22-24 October 2014. \url{http://gisc.gr/?mdocs-file=1048&mdocs-url=false}
 }
-\author{Stamatis Kalogirou <skalo@hua.gr>}
+\author{Stamatis Kalogirou <stamatis@lctools.science>}
 
 \examples{
 data(VotesGR)

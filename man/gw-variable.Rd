@@ -25,7 +25,7 @@ Fotheringham, A.S., Rees, P., Champion, T., Kalogirou, S., and Tremayne, A.R., 2
 Kalogirou, S. (2003) The Statistical Analysis And Modelling Of Internal Migration Flows Within England And Wales, PhD Thesis, School of Geography, Politics and Sociology, University of Newcastle upon Tyne, UK. \url{http://gisc.gr/?mdocs-file=1245&mdocs-url=false}
 
 }
-\author{Stamatis Kalogirou <skalo@hua.gr>}
+\author{Stamatis Kalogirou <stamatis@lctools.science>}
 
 \note{This code has been tested with Cartesian coordinates for the distances to be measured in meters. In the sample dataset GR.Municipalities the projection used is the EPSG:2100 (GGRS87 / Greek Grid)}
 

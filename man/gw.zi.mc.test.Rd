@@ -29,9 +29,9 @@ This function provides one approach for testing the significance of the spatial 
 Kalogirou, S. (2016) Destination Choice of Athenians: an application of geographically weighted versions of standard and zero inflated Poisson spatial interaction models, Geographical Analysis, 48(2),pp. 191-230. DOI: 10.1111/gean.12092 \url{http://onlinelibrary.wiley.com/doi/10.1111/gean.12092/abstract}
 }
 
-\author{Stamatis Kalogirou <skalo@hua.gr>}
+\author{Stamatis Kalogirou <stamatis@lctools.science>}
 
-\note{This function will development along with gw.zi.}
+\note{This function will be developed along with gw.zi.}
 
 \section{Warning}{Large datasets may take way too long to perform this test.}
 

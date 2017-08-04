@@ -24,7 +24,7 @@ Kalogirou, S. (2003) The Statistical Analysis and Modelling of Internal Migratio
 Kalogirou, S. (2016) Destination Choice of Athenians: an application of geographically weighted versions of standard and zero inflated Poisson spatial interaction models, Geographical Analysis, 48(2),pp. 191-230. DOI: 10.1111/gean.12092 \url{http://onlinelibrary.wiley.com/doi/10.1111/gean.12092/abstract}
 }
 
-\author{Stamatis Kalogirou <skalo@hua.gr>}
+\author{Stamatis Kalogirou <stamatis@lctools.science>}
 
 \seealso{
 \code{\link{gw.glm.bw}}

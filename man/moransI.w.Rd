@@ -1,7 +1,7 @@
 \name{moransI.w}
 \alias{moransI.w}
 \title{Moran's I classic statistic for assessing spatial autocorrelation using a ready made weights matrix.}
-\description{Moran's I is one of the oldest statistics used to examine spatial autocorrelation. This global statistic was first proposed by Moran (1948, 1950). Later, Cliff and Ord (1973, 1981) present a comprehensive work on spatial autocorrelation and suggested a formula to calculate the I which is now used in most textbooks and software: \deqn{I = (n/W)*(\Sigma \Sigma w_{ij}*z_i*z_j/ \Sigma z_i^2)} where n is number of observations, W is the sum of the weights w_ij for all pairs in the system, z_i=x_i - mean(x) where x is the value of the variable at location i and mean(x) the mean value of the variable in question (Eq. 5.2 Kalogirou, 2003).
+\description{Moran's I is one of the oldest statistics used to examine spatial autocorrelation. This global statistic was first proposed by Moran (1948, 1950). Later, Cliff and Ord (1973, 1981) present a comprehensive work on spatial autocorrelation and suggested a formula to calculate the I which is now used in most textbooks and software: \deqn{I = (n/W)*(\Sigma \Sigma w_{ij}*z_i*z_j/ \Sigma z_i^2)} where n is number of observations, W is the sum of the weights w_ij for all pairs in the system, \eqn{z_i=x_i - mean(x)} where x is the value of the variable at location i and mean(x) the mean value of the variable in question (Eq. 5.2 Kalogirou, 2003).
 
 The implementation here allows for the use of a weights matrix that could use any weighting scheme created either within lctools (using the w.matrix function) or other R packages. Resampling and randomization null hypotheses have been tested following the discussion of Goodchild (1986, pp. 24-26).
 }
@@ -47,7 +47,7 @@ Kalogirou, S. (2015) Spatial Analysis: Methodology and Applications with R. [ebo
 
 Paradis et al., 2016, ape: Analyses of Phylogenetics and Evolution, \url{http://ape-package.ird.fr/}
 }
-\author{Stamatis Kalogirou <skalo@hua.gr>}
+\author{Stamatis Kalogirou <stamatis@lctools.science>}
 
 \seealso{
 \code{\link{moransI}}, \code{\link{w.matrix}}

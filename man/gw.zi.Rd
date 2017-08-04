@@ -6,7 +6,7 @@
 gw.zi(formula, family, dframe, bw, kernel, coords)
 }
 \arguments{
-  \item{formula}{the local model to be fitted using the same syntax used in the zeroinfl function of the R package \code{pscl}. This is a sting (a symbolic description of the model) that is passed to the sub-models' \code{\link{zeroinfl}} function. For more details look at the details of the \code{\link{zeroinfl}} function.}
+  \item{formula}{the local model to be fitted using the same syntax used in the zeroinfl function of the R package \code{pscl}. This is a sting (a symbolic description of the model) that is passed to the sub-models' \link{zeroinfl} function. For more details look at the details of the \code{\link{zeroinfl}} function.}
   \item{family}{a specification of the count model family to be used in the local model as in the \code{\link{zeroinfl}} function. Currently the only option tested is "poisson".}
   \item{dframe}{a numeric data frame of at least two suitable variables (one dependent and one independent)}
   \item{bw}{a positive number that may be an integer in the case of an "adaptive kernel" or a real in the case of a "fixed kernel". In the first case the integer denotes the number of nearest neighbours, whereas in the latter case the real number refers to the bandwidth (in meters if the coordinates provided are Cartesian). This argument can be also the result of a bandwidth selection algorithm such as those available in the function \code{gw.zi.bw}}
@@ -28,7 +28,7 @@ The Geographically Weighted Zero Inflated Poisson Regression (GWZIPR) is a metho
 Kalogirou, S. (2016) Destination Choice of Athenians: an application of geographically weighted versions of standard and zero inflated Poisson spatial interaction models, Geographical Analysis, 48(2),pp. 191-230. DOI: 10.1111/gean.12092 \url{http://onlinelibrary.wiley.com/doi/10.1111/gean.12092/abstract}
 }
 
-\author{Stamatis Kalogirou <skalo@hua.gr>}
+\author{Stamatis Kalogirou <stamatis@lctools.science>}
 
 \note{This function is under development. There should be improvements in future versions of the package lctools. Any suggestion is welcome!
 }

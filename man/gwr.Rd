@@ -29,7 +29,7 @@ Fotheringham, A.S., Brunsdon, C., Charlton, M. (2000). Geographically Weighted R
 Kalogirou, S. (2003) The Statistical Analysis and Modelling of Internal Migration Flows within England and Wales, PhD Thesis, School of Geography, Politics and Sociology, University of Newcastle upon Tyne, UK. \url{http://gisc.gr/?mdocs-file=1245&mdocs-url=false}
 }
 
-\author{Stamatis Kalogirou <skalo@hua.gr>}
+\author{Stamatis Kalogirou <stamatis@lctools.science>}
 
 \note{
 This function is under development. There should be improvements in future versions of the package lctools. Any suggestion is welcome!

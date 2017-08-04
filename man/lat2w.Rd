@@ -25,7 +25,7 @@ Kalogirou, S. (2003) The Statistical Analysis and Modelling of Internal Migratio
 
 Kalogirou, S. (2015) Spatial Analysis: Methodology and Applications with R. [ebook] Athens: Hellenic Academic Libraries Link. ISBN: 978-960-603-285-1 (in Greek). \url{https://repository.kallipos.gr/handle/11419/5029?locale=en}
 }
-\author{Stamatis Kalogirou <skalo@hua.gr>}
+\author{Stamatis Kalogirou <stamatis@lctools.science>}
 
 \seealso{
  \code{\link{w.matrix}}, \code{\link{moransI.w}}, \code{\link{spGini.w}}

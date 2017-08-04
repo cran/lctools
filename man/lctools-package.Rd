@@ -4,14 +4,14 @@
 \docType{package}
 \title{Local Correlation, Spatial Inequalities, Spatial Regression and Other Tools}
 \description{
-The main purpose of lctools is to assist spatial analysis researchers and educators to use simple, yet powerful, transparent and user friendly tools for calculating key spatial statistics and fitting spatial models. lctools was originally created to help testing the existence of local multi-collinearity among the explanatory variables of local regression models. The main function (lcorrel) allows for the computation of Local Pearson and Geographically Weighted Pearson Correlation Coefficients and their significance. However, the latter could also be used for examining the existence of local association between pairs of variables. As spatial analysis techniques develop, this package has other spatial statistical tools: the spatial decomposition of the Gini coefficient, the spatial/Focal LQ, global and local Moran's I and tools that help computing variables for Spatial Interaction Models. Since the version 0.2-4, lctools allows for the application of various Geographically Weighted Regression methods including the Geographically Weighted Zero Inflated Poisson Regression recently proposed in the literature (Kalogirou, 2015). This package also contains functions for measuring the significance level for each statistic calculated. The latter mainly refers to Monte Carlo simulations. The package comes with two datasets one of which is a spatial data frame that refers to the Municipalities in Greece.}
+The main purpose of lctools is to assist spatial analysis researchers and educators to use simple, yet powerful, transparent and user friendly tools for calculating key spatial statistics and fitting spatial models. lctools was originally created to help testing the existence of local multi-collinearity among the explanatory variables of local regression models. The main function (lcorrel) allows for the computation of Local Pearson and Geographically Weighted Pearson Correlation Coefficients and their significance. However, the latter could also be used for examining the existence of local association between pairs of variables. As spatial analysis techniques develop, this package has other spatial statistical tools: the spatial decomposition of the Gini coefficient, the spatial/Focal LQ, global and local Moran's I and tools that help computing variables for Spatial Interaction Models. Since the version 0.2-4, lctools allows for the application of various Geographically Weighted Regression methods including the Geographically Weighted Zero Inflated Poisson Regression recently proposed in the literature (Kalogirou, 2016). This package also contains functions for measuring the significance level for each statistic calculated. The latter mainly refers to Monte Carlo simulations. The package comes with two datasets one of which is a spatial data frame that refers to the Municipalities in Greece.}
 
 \details{
 \tabular{ll}{
 Package: \tab lctools\cr
 Type: \tab Package\cr
-Version: \tab 0.2-5\cr
-Date: \tab 2016-09-03\cr
+Version: \tab 0.2-6\cr
+Date: \tab 2017-08-04\cr
 License: \tab GPL (>= 2)
 }
   
@@ -19,7 +19,7 @@ License: \tab GPL (>= 2)
 \author{
 Stamatis Kalogirou
 
-Maintainer: Stamatis Kalogirou <skalo@hua.gr}
+Maintainer: Stamatis Kalogirou <stamatis@lctools.science>}
 
 \note{Acknowledgement: I am grateful to the University of Luxembourg and would like to personally thank Ass. Professor Geoffrey Caruso, Professor Markus Hesse and Professor Christian Schulz for their support during my research visit at the Institute of Geography and Spatial Planning (Sept. 2013 - Feb. 2014) where this package was originally developed.}
 
