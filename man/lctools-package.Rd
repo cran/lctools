@@ -10,8 +10,8 @@ The main purpose of lctools is to assist spatial analysis researchers and educat
 \tabular{ll}{
 Package: \tab lctools\cr
 Type: \tab Package\cr
-Version: \tab 0.2-6\cr
-Date: \tab 2017-08-04\cr
+Version: \tab 0.2-7\cr
+Date: \tab 2018-05-20\cr
 License: \tab GPL (>= 2)
 }
   

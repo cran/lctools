@@ -1,4 +1,4 @@
-l.moransI<-function(Coords, Bandwidth, x, WType='Binary', scatter.plot = TRUE){
+l.moransI<-function(Coords, Bandwidth, x, WType='Binary', scatter.plot = TRUE, family='adaptive'){
 
   Distances<-dist(Coords)
   Dij <- as.matrix(Distances)
@@ -6,9 +6,34 @@ l.moransI<-function(Coords, Bandwidth, x, WType='Binary', scatter.plot = TRUE){
   #Observations
   Obs<-length(x)
   
-  if(Bandwidth>=Obs){
-    Bandwidth<-Obs-1
-    msg<-cat("Bandwidth set to:",Bandwidth)}
+  
+  if(family =='adaptive' && Bandwidth>=Obs){
+    Bandwidth <- Obs-1
+    msg<-cat("The number of nearest neighbours exceeds the number of observations minus one.\nBandwidth set to:", Bandwidth,"\n")
+  } else if(family =='adaptive' && Bandwidth==0){
+    Bandwidth <- 2
+    msg<-cat("The selected number of nearest neighbours is zero.\nBandwidth set to:", Bandwidth,"\n")
+  }
+  if(family=='fixed') {
+    Dn.min <- apply(Dij, 2, FUN=function(x) {min(x[x > 0])})
+    dn.max <- max(Dn.min)
+    
+    if (Bandwidth < dn.max){
+      Dn <- apply(Dij, 2, FUN=function(x) {sum(x[x <= Bandwidth])})
+      Dn.v <- as.vector(Dn)          
+      nn <- sum(Dn.v==0)
+      if (nn > round(0.1*Obs)) { 
+        stop("More than 10% of the observations have no neighbours. Choose a higher bandwidth and try again.\n")
+      } else{ msg<-cat("The bandwidth ", Bandwidth, " will result ", nn,
+                       " observations without neighbours. \nTo avoid this you could set the bandwidth to at least: ", dn.max,"\n")
+      }
+    }
+  }
+  
+  
+  # if(Bandwidth>=Obs){
+  #   Bandwidth<-Obs-1
+  #   msg<-cat("Bandwidth set to:",Bandwidth)}
     
   #Mean(x)
   mean.x=mean(x)
@@ -38,11 +63,18 @@ l.moransI<-function(Coords, Bandwidth, x, WType='Binary', scatter.plot = TRUE){
     #Sort by distance
     DataSetSorted<- DataSet[order(DataSet$DNeighbour),]
     
-    #Keep Nearest Neighvbours
-    SubSet1<-DataSetSorted[2:(Bandwidth+1),]
+    if(family=='adaptive')
+    { 
+      #Keep Nearest Neighbours
+      SubSet1 <- DataSetSorted[2:(Bandwidth+1),]
     
-    #Find furthest neighbour
-    Kernel_H<-max(SubSet1$DNeighbour)
+      #Find furthest neighbour
+      Kernel_H <- max(SubSet1$DNeighbour)
+    } 
+    else if(family=='fixed')
+    {
+      Kernel_H <- Bandwidth
+    }
     
     #Calculate weights
     for(j in 1:Obs){
@@ -52,10 +84,13 @@ l.moransI<-function(Coords, Bandwidth, x, WType='Binary', scatter.plot = TRUE){
         }
       else{
         if(WType=='Bi-square'){
+          
           Wts[i,j]<-(1-(DataSet$DNeighbour[j]/Kernel_H)^2)^2}
+        
         else{
-          Wts[i,j]<-1/Bandwidth} #/Bandwidth
-        }
+          #Wts[i,j]<-1/Bandwidth} #/Bandwidth
+          Wts[i,j]<-1} #/Bandwidth
+    }
       
       if (j!=i){
         l.moran_nom[i,1]<-l.moran_nom[i,1] + (Wts[i,j]*(x[j]-mean.x))

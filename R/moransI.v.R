@@ -3,8 +3,8 @@ moransI.v <- function(Coords, Bandwidths, x, WType='Binary', family='adaptive', 
   k = length(Bandwidths)
   moran.table <- matrix(data=NA, nrow= k, ncol=8)
   
-  colnames(moran.table) <- c("ID", "k", "Moran's I", "Expected I", "Z resampling", "P-value resampling",
-                             "Z randomization", "P-value randomization")
+  colnames(moran.table) <- c("ID", "k", "Moran's I", "Expected I", "Z resampling", "P-value res.",
+                             "Z randomization", "P-value rand.")
   counter <- 1
 
   for(b in Bandwidths){

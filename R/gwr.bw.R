@@ -106,7 +106,7 @@ gwr.bw<-function(formula, dframe, coords, kernel, algorithm="exhaustive", optim.
       } 
   else 
   { 
-    if (algorithm == "optim") 
+    if (algorithm == "heuristic") 
       { if(optim.method=="Brent")
       
         {

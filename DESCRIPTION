@@ -1,13 +1,13 @@
 Package: lctools
-Version: 0.2-6
-Date: 2017-08-04
+Version: 0.2-7
+Date: 2019-05-22
 Type: Package
 Title: Local Correlation, Spatial Inequalities, Geographically Weighted
         Regression and Other Tools
 Author: Stamatis Kalogirou [aut, cre]
 Maintainer: Stamatis Kalogirou <stamatis@lctools.science>
-Depends: R (>= 3.4.0), reshape (>= 0.8.6), weights (>= 0.85), pscl (>=
-        1.4.9), MASS (>= 7.3-47)
+Depends: R (>= 3.5.0), reshape (>= 0.8.8), weights (>= 1.0), pscl (>=
+        1.5.2), MASS (>= 7.3-51.3)
 Description: Provides researchers and educators with easy-to-learn user friendly tools for calculating 
     key spatial statistics and to apply simple as well as advanced methods of spatial analysis in real data. 
     These include: Local Pearson and Geographically Weighted Pearson Correlation Coefficients, 
@@ -20,6 +20,6 @@ VignetteBuilder: knitr
 URL: http://lctools.science/
 Suggests: knitr, sp
 NeedsCompilation: no
-Packaged: 2017-08-03 22:41:21 UTC; Stamatis
+Packaged: 2019-04-22 22:56:31 UTC; Stamatis
 Repository: CRAN
-Date/Publication: 2017-08-04 09:45:46 UTC
+Date/Publication: 2019-04-23 05:50:03 UTC

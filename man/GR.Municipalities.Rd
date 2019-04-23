@@ -6,7 +6,7 @@
 
 \usage{data(GR.Municipalities)}
 \format{
-  A data frame with 325 observations on the following 5 variables.
+  A data frame with 325 observations on the following 14 variables.
   \describe{
     \item{\code{OBJECTID}}{a numeric vector of area IDs}
     \item{\code{X}}{a numeric vector of x coordinates}
