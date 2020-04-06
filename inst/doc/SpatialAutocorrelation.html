@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<title>Introduction</title>
+
+<script type="text/javascript">
+window.onload = function() {
+  var imgs = document.getElementsByTagName('img'), i, img;
+  for (i = 0; i < imgs.length; i++) {
+    img = imgs[i];
+    // center an image if it is the only element of its parent
+    if (img.parentElement.childElementCount === 1)
+      img.parentElement.style.textAlign = 'center';
+  }
+};
+</script>
+
+<!-- Styles for R syntax highlighter -->
+<style type="text/css">
+   pre .operator,
+   pre .paren {
+     color: rgb(104, 118, 135)
+   }
+
+   pre .literal {
+     color: #990073
+   }
+
+   pre .number {
+     color: #099;
+   }
+
+   pre .comment {
+     color: #998;
+     font-style: italic
+   }
+
+   pre .keyword {
+     color: #900;
+     font-weight: bold
+   }
+
+   pre .identifier {
+     color: rgb(0, 0, 0);
+   }
+
+   pre .string {
+     color: #d14;
+   }
+</style>
+
+<!-- R syntax highlighter -->
+<script type="text/javascript">
+var hljs=new function(){function m(p){return p.replace(/&/gm,"&amp;").replace(/</gm,"&lt;")}function f(r,q,p){return RegExp(q,"m"+(r.cI?"i":"")+(p?"g":""))}function b(r){for(var p=0;p<r.childNodes.length;p++){var q=r.childNodes[p];if(q.nodeName=="CODE"){return q}if(!(q.nodeType==3&&q.nodeValue.match(/\s+/))){break}}}function h(t,s){var p="";for(var r=0;r<t.childNodes.length;r++){if(t.childNodes[r].nodeType==3){var q=t.childNodes[r].nodeValue;if(s){q=q.replace(/\n/g,"")}p+=q}else{if(t.childNodes[r].nodeName=="BR"){p+="\n"}else{p+=h(t.childNodes[r])}}}if(/MSIE [678]/.test(navigator.userAgent)){p=p.replace(/\r/g,"\n")}return p}function a(s){var r=s.className.split(/\s+/);r=r.concat(s.parentNode.className.split(/\s+/));for(var q=0;q<r.length;q++){var p=r[q].replace(/^language-/,"");if(e[p]){return p}}}function c(q){var p=[];(function(s,t){for(var r=0;r<s.childNodes.length;r++){if(s.childNodes[r].nodeType==3){t+=s.childNodes[r].nodeValue.length}else{if(s.childNodes[r].nodeName=="BR"){t+=1}else{if(s.childNodes[r].nodeType==1){p.push({event:"start",offset:t,node:s.childNodes[r]});t=arguments.callee(s.childNodes[r],t);p.push({event:"stop",offset:t,node:s.childNodes[r]})}}}}return t})(q,0);return p}function k(y,w,x){var q=0;var z="";var s=[];function u(){if(y.length&&w.length){if(y[0].offset!=w[0].offset){return(y[0].offset<w[0].offset)?y:w}else{return w[0].event=="start"?y:w}}else{return y.length?y:w}}function t(D){var A="<"+D.nodeName.toLowerCase();for(var B=0;B<D.attributes.length;B++){var C=D.attributes[B];A+=" "+C.nodeName.toLowerCase();if(C.value!==undefined&&C.value!==false&&C.value!==null){A+='="'+m(C.value)+'"'}}return A+">"}while(y.length||w.length){var v=u().splice(0,1)[0];z+=m(x.substr(q,v.offset-q));q=v.offset;if(v.event=="start"){z+=t(v.node);s.push(v.node)}else{if(v.event=="stop"){var p,r=s.length;do{r--;p=s[r];z+=("</"+p.nodeName.toLowerCase()+">")}while(p!=v.node);s.splice(r,1);while(r<s.length){z+=t(s[r]);r++}}}}return z+m(x.substr(q))}function j(){function q(x,y,v){if(x.compiled){return}var u;var s=[];if(x.k){x.lR=f(y,x.l||hljs.IR,true);for(var w in x.k){if(!x.k.hasOwnProperty(w)){continue}if(x.k[w] instanceof Object){u=x.k[w]}else{u=x.k;w="keyword"}for(var r in u){if(!u.hasOwnProperty(r)){continue}x.k[r]=[w,u[r]];s.push(r)}}}if(!v){if(x.bWK){x.b="\\b("+s.join("|")+")\\s"}x.bR=f(y,x.b?x.b:"\\B|\\b");if(!x.e&&!x.eW){x.e="\\B|\\b"}if(x.e){x.eR=f(y,x.e)}}if(x.i){x.iR=f(y,x.i)}if(x.r===undefined){x.r=1}if(!x.c){x.c=[]}x.compiled=true;for(var t=0;t<x.c.length;t++){if(x.c[t]=="self"){x.c[t]=x}q(x.c[t],y,false)}if(x.starts){q(x.starts,y,false)}}for(var p in e){if(!e.hasOwnProperty(p)){continue}q(e[p].dM,e[p],true)}}function d(B,C){if(!j.called){j();j.called=true}function q(r,M){for(var L=0;L<M.c.length;L++){if((M.c[L].bR.exec(r)||[null])[0]==r){return M.c[L]}}}function v(L,r){if(D[L].e&&D[L].eR.test(r)){return 1}if(D[L].eW){var M=v(L-1,r);return M?M+1:0}return 0}function w(r,L){return L.i&&L.iR.test(r)}function K(N,O){var M=[];for(var L=0;L<N.c.length;L++){M.push(N.c[L].b)}var r=D.length-1;do{if(D[r].e){M.push(D[r].e)}r--}while(D[r+1].eW);if(N.i){M.push(N.i)}return f(O,M.join("|"),true)}function p(M,L){var N=D[D.length-1];if(!N.t){N.t=K(N,E)}N.t.lastIndex=L;var r=N.t.exec(M);return r?[M.substr(L,r.index-L),r[0],false]:[M.substr(L),"",true]}function z(N,r){var L=E.cI?r[0].toLowerCase():r[0];var M=N.k[L];if(M&&M instanceof Array){return M}return false}function F(L,P){L=m(L);if(!P.k){return L}var r="";var O=0;P.lR.lastIndex=0;var M=P.lR.exec(L);while(M){r+=L.substr(O,M.index-O);var N=z(P,M);if(N){x+=N[1];r+='<span class="'+N[0]+'">'+M[0]+"</span>"}else{r+=M[0]}O=P.lR.lastIndex;M=P.lR.exec(L)}return r+L.substr(O,L.length-O)}function J(L,M){if(M.sL&&e[M.sL]){var r=d(M.sL,L);x+=r.keyword_count;return r.value}else{return F(L,M)}}function I(M,r){var L=M.cN?'<span class="'+M.cN+'">':"";if(M.rB){y+=L;M.buffer=""}else{if(M.eB){y+=m(r)+L;M.buffer=""}else{y+=L;M.buffer=r}}D.push(M);A+=M.r}function G(N,M,Q){var R=D[D.length-1];if(Q){y+=J(R.buffer+N,R);return false}var P=q(M,R);if(P){y+=J(R.buffer+N,R);I(P,M);return P.rB}var L=v(D.length-1,M);if(L){var O=R.cN?"</span>":"";if(R.rE){y+=J(R.buffer+N,R)+O}else{if(R.eE){y+=J(R.buffer+N,R)+O+m(M)}else{y+=J(R.buffer+N+M,R)+O}}while(L>1){O=D[D.length-2].cN?"</span>":"";y+=O;L--;D.length--}var r=D[D.length-1];D.length--;D[D.length-1].buffer="";if(r.starts){I(r.starts,"")}return R.rE}if(w(M,R)){throw"Illegal"}}var E=e[B];var D=[E.dM];var A=0;var x=0;var y="";try{var s,u=0;E.dM.buffer="";do{s=p(C,u);var t=G(s[0],s[1],s[2]);u+=s[0].length;if(!t){u+=s[1].length}}while(!s[2]);if(D.length>1){throw"Illegal"}return{r:A,keyword_count:x,value:y}}catch(H){if(H=="Illegal"){return{r:0,keyword_count:0,value:m(C)}}else{throw H}}}function g(t){var p={keyword_count:0,r:0,value:m(t)};var r=p;for(var q in e){if(!e.hasOwnProperty(q)){continue}var s=d(q,t);s.language=q;if(s.keyword_count+s.r>r.keyword_count+r.r){r=s}if(s.keyword_count+s.r>p.keyword_count+p.r){r=p;p=s}}if(r.language){p.second_best=r}return p}function i(r,q,p){if(q){r=r.replace(/^((<[^>]+>|\t)+)/gm,function(t,w,v,u){return w.replace(/\t/g,q)})}if(p){r=r.replace(/\n/g,"<br>")}return r}function n(t,w,r){var x=h(t,r);var v=a(t);var y,s;if(v){y=d(v,x)}else{return}var q=c(t);if(q.length){s=document.createElement("pre");s.innerHTML=y.value;y.value=k(q,c(s),x)}y.value=i(y.value,w,r);var u=t.className;if(!u.match("(\\s|^)(language-)?"+v+"(\\s|$)")){u=u?(u+" "+v):v}if(/MSIE [678]/.test(navigator.userAgent)&&t.tagName=="CODE"&&t.parentNode.tagName=="PRE"){s=t.parentNode;var p=document.createElement("div");p.innerHTML="<pre><code>"+y.value+"</code></pre>";t=p.firstChild.firstChild;p.firstChild.cN=s.cN;s.parentNode.replaceChild(p.firstChild,s)}else{t.innerHTML=y.value}t.className=u;t.result={language:v,kw:y.keyword_count,re:y.r};if(y.second_best){t.second_best={language:y.second_best.language,kw:y.second_best.keyword_count,re:y.second_best.r}}}function o(){if(o.called){return}o.called=true;var r=document.getElementsByTagName("pre");for(var p=0;p<r.length;p++){var q=b(r[p]);if(q){n(q,hljs.tabReplace)}}}function l(){if(window.addEventListener){window.addEventListener("DOMContentLoaded",o,false);window.addEventListener("load",o,false)}else{if(window.attachEvent){window.attachEvent("onload",o)}else{window.onload=o}}}var e={};this.LANGUAGES=e;this.highlight=d;this.highlightAuto=g;this.fixMarkup=i;this.highlightBlock=n;this.initHighlighting=o;this.initHighlightingOnLoad=l;this.IR="[a-zA-Z][a-zA-Z0-9_]*";this.UIR="[a-zA-Z_][a-zA-Z0-9_]*";this.NR="\\b\\d+(\\.\\d+)?";this.CNR="\\b(0[xX][a-fA-F0-9]+|(\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)";this.BNR="\\b(0b[01]+)";this.RSR="!|!=|!==|%|%=|&|&&|&=|\\*|\\*=|\\+|\\+=|,|\\.|-|-=|/|/=|:|;|<|<<|<<=|<=|=|==|===|>|>=|>>|>>=|>>>|>>>=|\\?|\\[|\\{|\\(|\\^|\\^=|\\||\\|=|\\|\\||~";this.ER="(?![\\s\\S])";this.BE={b:"\\\\.",r:0};this.ASM={cN:"string",b:"'",e:"'",i:"\\n",c:[this.BE],r:0};this.QSM={cN:"string",b:'"',e:'"',i:"\\n",c:[this.BE],r:0};this.CLCM={cN:"comment",b:"//",e:"$"};this.CBLCLM={cN:"comment",b:"/\\*",e:"\\*/"};this.HCM={cN:"comment",b:"#",e:"$"};this.NM={cN:"number",b:this.NR,r:0};this.CNM={cN:"number",b:this.CNR,r:0};this.BNM={cN:"number",b:this.BNR,r:0};this.inherit=function(r,s){var p={};for(var q in r){p[q]=r[q]}if(s){for(var q in s){p[q]=s[q]}}return p}}();hljs.LANGUAGES.cpp=function(){var a={keyword:{"false":1,"int":1,"float":1,"while":1,"private":1,"char":1,"catch":1,"export":1,virtual:1,operator:2,sizeof:2,dynamic_cast:2,typedef:2,const_cast:2,"const":1,struct:1,"for":1,static_cast:2,union:1,namespace:1,unsigned:1,"long":1,"throw":1,"volatile":2,"static":1,"protected":1,bool:1,template:1,mutable:1,"if":1,"public":1,friend:2,"do":1,"return":1,"goto":1,auto:1,"void":2,"enum":1,"else":1,"break":1,"new":1,extern:1,using:1,"true":1,"class":1,asm:1,"case":1,typeid:1,"short":1,reinterpret_cast:2,"default":1,"double":1,register:1,explicit:1,signed:1,typename:1,"try":1,"this":1,"switch":1,"continue":1,wchar_t:1,inline:1,"delete":1,alignof:1,char16_t:1,char32_t:1,constexpr:1,decltype:1,noexcept:1,nullptr:1,static_assert:1,thread_local:1,restrict:1,_Bool:1,complex:1},built_in:{std:1,string:1,cin:1,cout:1,cerr:1,clog:1,stringstream:1,istringstream:1,ostringstream:1,auto_ptr:1,deque:1,list:1,queue:1,stack:1,vector:1,map:1,set:1,bitset:1,multiset:1,multimap:1,unordered_set:1,unordered_map:1,unordered_multiset:1,unordered_multimap:1,array:1,shared_ptr:1}};return{dM:{k:a,i:"</",c:[hljs.CLCM,hljs.CBLCLM,hljs.QSM,{cN:"string",b:"'\\\\?.",e:"'",i:"."},{cN:"number",b:"\\b(\\d+(\\.\\d*)?|\\.\\d+)(u|U|l|L|ul|UL|f|F)"},hljs.CNM,{cN:"preprocessor",b:"#",e:"$"},{cN:"stl_container",b:"\\b(deque|list|queue|stack|vector|map|set|bitset|multiset|multimap|unordered_map|unordered_set|unordered_multiset|unordered_multimap|array)\\s*<",e:">",k:a,r:10,c:["self"]}]}}}();hljs.LANGUAGES.r={dM:{c:[hljs.HCM,{cN:"number",b:"\\b0[xX][0-9a-fA-F]+[Li]?\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"number",b:"\\b\\d+(?:[eE][+\\-]?\\d*)?L\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"number",b:"\\b\\d+\\.(?!\\d)(?:i\\b)?",e:hljs.IMMEDIATE_RE,r:1},{cN:"number",b:"\\b\\d+(?:\\.\\d*)?(?:[eE][+\\-]?\\d*)?i?\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"number",b:"\\.\\d+(?:[eE][+\\-]?\\d*)?i?\\b",e:hljs.IMMEDIATE_RE,r:1},{cN:"keyword",b:"(?:tryCatch|library|setGeneric|setGroupGeneric)\\b",e:hljs.IMMEDIATE_RE,r:10},{cN:"keyword",b:"\\.\\.\\.",e:hljs.IMMEDIATE_RE,r:10},{cN:"keyword",b:"\\.\\.\\d+(?![\\w.])",e:hljs.IMMEDIATE_RE,r:10},{cN:"keyword",b:"\\b(?:function)",e:hljs.IMMEDIATE_RE,r:2},{cN:"keyword",b:"(?:if|in|break|next|repeat|else|for|return|switch|while|try|stop|warning|require|attach|detach|source|setMethod|setClass)\\b",e:hljs.IMMEDIATE_RE,r:1},{cN:"literal",b:"(?:NA|NA_integer_|NA_real_|NA_character_|NA_complex_)\\b",e:hljs.IMMEDIATE_RE,r:10},{cN:"literal",b:"(?:NULL|TRUE|FALSE|T|F|Inf|NaN)\\b",e:hljs.IMMEDIATE_RE,r:1},{cN:"identifier",b:"[a-zA-Z.][a-zA-Z0-9._]*\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"operator",b:"<\\-(?!\\s*\\d)",e:hljs.IMMEDIATE_RE,r:2},{cN:"operator",b:"\\->|<\\-",e:hljs.IMMEDIATE_RE,r:1},{cN:"operator",b:"%%|~",e:hljs.IMMEDIATE_RE},{cN:"operator",b:">=|<=|==|!=|\\|\\||&&|=|\\+|\\-|\\*|/|\\^|>|<|!|&|\\||\\$|:",e:hljs.IMMEDIATE_RE,r:0},{cN:"operator",b:"%",e:"%",i:"\\n",r:1},{cN:"identifier",b:"`",e:"`",r:0},{cN:"string",b:'"',e:'"',c:[hljs.BE],r:0},{cN:"string",b:"'",e:"'",c:[hljs.BE],r:0},{cN:"paren",b:"[[({\\])}]",e:hljs.IMMEDIATE_RE,r:0}]}};
+hljs.initHighlightingOnLoad();
+</script>
+
+<!-- MathJax scripts -->
+<script type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+<style type="text/css">
+body, td {
+   font-family: sans-serif;
+   background-color: white;
+   font-size: 13px;
+}
+
+body {
+  max-width: 800px;
+  margin: auto;
+  padding: 1em;
+  line-height: 20px;
+}
+
+tt, code, pre {
+   font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
+}
+
+h1 {
+   font-size:2.2em;
+}
+
+h2 {
+   font-size:1.8em;
+}
+
+h3 {
+   font-size:1.4em;
+}
+
+h4 {
+   font-size:1.0em;
+}
+
+h5 {
+   font-size:0.9em;
+}
+
+h6 {
+   font-size:0.8em;
+}
+
+a:visited {
+   color: rgb(50%, 0%, 50%);
+}
+
+pre, img {
+  max-width: 100%;
+}
+pre {
+  overflow-x: auto;
+}
+pre code {
+   display: block; padding: 0.5em;
+}
+
+code {
+  font-size: 92%;
+  border: 1px solid #ccc;
+}
+
+code[class] {
+  background-color: #F8F8F8;
+}
+
+table, td, th {
+  border: none;
+}
+
+blockquote {
+   color:#666666;
+   margin:0;
+   padding-left: 1em;
+   border-left: 0.5em #EEE solid;
+}
+
+hr {
+   height: 0px;
+   border-bottom: none;
+   border-top-width: thin;
+   border-top-style: dotted;
+   border-top-color: #999999;
+}
+
+@media print {
+   * {
+      background: transparent !important;
+      color: black !important;
+      filter:none !important;
+      -ms-filter: none !important;
+   }
+
+   body {
+      font-size:12pt;
+      max-width:100%;
+   }
+
+   a, a:visited {
+      text-decoration: underline;
+   }
+
+   hr {
+      visibility: hidden;
+      page-break-before: always;
+   }
+
+   pre, blockquote {
+      padding-right: 1em;
+      page-break-inside: avoid;
+   }
+
+   tr, img {
+      page-break-inside: avoid;
+   }
+
+   img {
+      max-width: 100% !important;
+   }
+
+   @page :left {
+      margin: 15mm 20mm 15mm 10mm;
+   }
+
+   @page :right {
+      margin: 15mm 10mm 15mm 20mm;
+   }
+
+   p, h2, h3 {
+      orphans: 3; widows: 3;
+   }
+
+   h2, h3 {
+      page-break-after: avoid;
+   }
+}
+</style>
+
+
+
+</head>
+
+<body>
+<h1>Introduction</h1>
+
+<h2>Exploratory Spatial Data Analysis (ESDA) &amp; Spatial autocorrelation</h2>
+
+<p>Spatial autocorrelation is a method of Exploratory Spatial Data Analysis (ESDA). The latter set of methods allow for the study and understanding of the spatial distribution and spatial structure as well as they allow for detecting spatial dependence or autocorrelation in spatial data. More specifically, spatial autocorrelation is the correlation between the values of a single variable that is strictly due to the proximity of these values in geographical space by introducing a deviation from the assumption of independent observations of classical statistics (Griffith, 2003). The most common spatial autocorrelation indicators in the literature are: the Moran&#39;s <em>I</em>, the Geary&#39;s <em>c</em>, and the Getis&#39; <em>G</em>.</p>
+
+<h2>Moran&#39;s I</h2>
+
+<p>Moran&#39;s \(I\) is one of the oldest statistics used to examine spatial autocorrelation. This global statistic was first proposed by Moran (1948, 1950). Later, Cliff and Ord (1973, 1981) present a comprehensive work on spatial autocorrelation and suggested a formula to calculate the \(I\) which is now used in most textbooks and software: \(I = \frac{n}{W} \frac{\sum_{i=1}^{n} \sum_{j=1}^{n} w_{ij} z_i z_j} {\sum_{i=1}^{n} z_i^2}\) where \(n\) is number of observations, \(W\) is the sum of the weights \(w_{ij}\) for all pairs in the system, \(z_i=x_i - \bar{x}\) where \(x\) is the value of the variable at location \(i\) and \(\bar{x}\) the mean value of the variable in question (Eq. 5.2 Kalogirou, 2003). </p>
+
+<p>The original implementation here (function <code>moransI</code>) allows only nearest neighbour weighting schemes. However, the function <code>moransI.w</code> allows for any weighting scheme if by means of a weighting matrix. Using the package <em>lctools</em>, the latter can be computed by the function <code>w.matrix</code> that currently supports a fixed (straight distance) and an adaptive (number of nearest neighbours) spatial kernels. Resampling and randomization null hypotheses have been tested following the discussion of Goodchild (1986, pp. 24-26).</p>
+
+<h1>Exploring the data</h1>
+
+<p>The <em>lctools</em> package has some built in data to allow for practicing the various spatial analysis techniques. One of the datasets is <code>GR.Municipalities</code>. The latter is a SpatialPolygonsDataFrame that refers to the 325 Municipalities in Greece (Programme Kallikratis) in 2011. The descriptive data for each municipality include demographic and economic variables the source of which are the 2001 Census of Population and the General Secretariat for Information Systems, respectively.</p>
+
+<pre><code class="r">library(lctools)
+data(GR.Municipalities)
+names(GR.Municipalities@data)
+</code></pre>
+
+<pre><code>##  [1] &quot;OBJECTID&quot;   &quot;X&quot;          &quot;Y&quot;          &quot;Name&quot;       &quot;CodeELSTAT&quot;
+##  [6] &quot;PopM01&quot;     &quot;PopF01&quot;     &quot;PopTot01&quot;   &quot;UnemrM01&quot;   &quot;UnemrF01&quot;  
+## [11] &quot;UnemrT01&quot;   &quot;PrSect01&quot;   &quot;Foreig01&quot;   &quot;Income01&quot;
+</code></pre>
+
+<p>To learn more about the above data set, try <code>help(GR.Municipalities)</code>. </p>
+
+<h1>Calculate the global Moran&#39;s I</h1>
+
+<p>To calculate the global Moran&#39;s I statistic one can:
+1. make use of the function <code>MoransI</code> with three arguments: the coordinates of the observations, the number of nearest neighbours and the variable for which the statistic will be calculated for, or
+2. calculate the weights matrix using the function <code>w.matrix</code> (arguments being the coordinates of the observations, the bandwidth -fixed or adaptive, and the weighting scheme) and then use the function <code>moransI.w</code> with two arguments: the weights matrix and the variable in question.</p>
+
+<p>The coordinates refer to the geometric centro-ids of the municipalities in Greece. In the next two examples, the number of nearest neighbours is set to 6 and the straight distance bandwidth to 50 kilometres. The selected weights are binary (\(w_{ij}\)=1 for neighbours and =0 for non-neighbours. The variable to be analysed refers to the mean annual recorded income in 2001 (in Euros).</p>
+
+<h2>Case 1: function <em>MoransI</em></h2>
+
+<pre><code class="r">Coords &lt;- cbind(GR.Municipalities@data$X, GR.Municipalities@data$Y)
+bw &lt;- 6
+mI &lt;- moransI(Coords,bw,GR.Municipalities@data$Income01)
+moran.table &lt;- matrix(data=NA,nrow=1,ncol=6)
+col.names &lt;- c(&quot;Moran&#39;s I&quot;, &quot;Expected I&quot;, &quot;Z resampling&quot;, &quot;P-value resampling&quot;,
+               &quot;Z randomization&quot;, &quot;P-value randomization&quot;)
+colnames(moran.table) &lt;- col.names
+moran.table[1,1] &lt;- mI$Morans.I
+moran.table[1,2] &lt;- mI$Expected.I
+moran.table[1,3] &lt;- mI$z.resampling
+moran.table[1,4] &lt;- mI$p.value.resampling
+moran.table[1,5] &lt;- mI$z.randomization
+moran.table[1,6] &lt;- mI$p.value.randomization
+</code></pre>
+
+<p>Using table formatting the results can be shown as follows:</p>
+
+<table><thead>
+<tr>
+<th align="right">Moran&#39;s I</th>
+<th align="right">Expected I</th>
+<th align="right">Z resampling</th>
+<th align="right">P-value resampling</th>
+<th align="right">Z randomization</th>
+<th align="right">P-value randomization</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="right">0.65441</td>
+<td align="right">-0.00309</td>
+<td align="right">22.27952</td>
+<td align="right">0</td>
+<td align="right">22.40946</td>
+<td align="right">0</td>
+</tr>
+</tbody></table>
+
+<h2>Case 2: functions <em>w.matrix</em> and <em>MoransI.w</em></h2>
+
+<p>The above calculation can be repeated as follows:</p>
+
+<pre><code class="r">#adaptive kernel
+w.adaptive &lt;- w.matrix(Coords,6, WType=&#39;Binary&#39;, family=&#39;adaptive&#39;)
+
+mI.adaptive &lt;- moransI.w(GR.Municipalities@data$Income01, w.adaptive)
+mI.adaptive &lt;- t(as.numeric(as.matrix(mI.adaptive[1:6])))
+colnames(mI.adaptive) &lt;- col.names
+</code></pre>
+
+<p>Using table formatting the results can be shown as follows:</p>
+
+<table><thead>
+<tr>
+<th align="right">Moran&#39;s I</th>
+<th align="right">Expected I</th>
+<th align="right">Z resampling</th>
+<th align="right">P-value resampling</th>
+<th align="right">Z randomization</th>
+<th align="right">P-value randomization</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="right">0.65441</td>
+<td align="right">-0.00309</td>
+<td align="right">22.27952</td>
+<td align="right">0</td>
+<td align="right">22.40946</td>
+<td align="right">0</td>
+</tr>
+</tbody></table>
+
+<p>An example Moran&#39;s I calculation with a fixed spatial kernel and a 50 km radius as the bandwidth can be computed as follows:</p>
+
+<pre><code class="r">#fixed kernel
+w.fixed &lt;- w.matrix(Coords, 50000, WType=&#39;Binary&#39;, family=&#39;fixed&#39;)
+</code></pre>
+
+<pre><code>## The bandwidth  50000  will result  5  observations without neighbours. 
+## To avoid this you could set the bandwidth to at least:  146287.7
+</code></pre>
+
+<pre><code class="r">mI.fixed&lt;- moransI.w(GR.Municipalities@data$Income01, w.fixed)
+mI.fixed &lt;- t(as.numeric(as.matrix(mI.fixed[1:6])))
+
+colnames(mI.fixed) &lt;- col.names
+</code></pre>
+
+<p>The above bandwidth is such that 5 observations will have no neighbours. This is a result of a check that is printed out from the <code>moransI.w</code> function. These observations refer to isolated islands, such as Megisti east of Rhodes, which is 150 km away from its nearest neighbour. Using table formatting the results can be shown as follows:</p>
+
+<table><thead>
+<tr>
+<th align="right">Moran&#39;s I</th>
+<th align="right">Expected I</th>
+<th align="right">Z resampling</th>
+<th align="right">P-value resampling</th>
+<th align="right">Z randomization</th>
+<th align="right">P-value randomization</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="right">0.4813</td>
+<td align="right">-0.00309</td>
+<td align="right">16.50666</td>
+<td align="right">0</td>
+<td align="right">16.60292</td>
+<td align="right">0</td>
+</tr>
+</tbody></table>
+
+<p>The above results suggest a strong positive spatial autocorrelation that is statistically significant using either the randomization or resampling hypotheses (Cliff and Ord, 1973; 1981; Goodchild, 1986). In order to examine the sensitivity of the above results, one could try different bandwidth sizes (i.e. number of nearest neighbours). This can be done by either a loop or by using the function <code>moransI.v</code> that computes a number of Moran&#39;s I statistics with different kernel sizes of the same family and optionally shows a scatter plot with the Moran&#39;s I for each kernel size.</p>
+
+<pre><code class="r">bws &lt;- c(3, 4, 6, 9, 12, 18, 24)
+moran &lt;- moransI.v(Coords, bws, GR.Municipalities@data$Income01)
+</code></pre>
+
+<p><img src="data:image/png;base64,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" alt="plot of chunk unnamed-chunk-8"/></p>
+
+<p>The Moran&#39;s I along with significance tests for all spatial kernels are presented in the table below. The Moran&#39;s I statistics for the mean annual recorded income is above 0.5 in all cases suggesting a strong positive spatial autocorrelation. They are also statistically significant in all cases.</p>
+
+<table><thead>
+<tr>
+<th align="right">ID</th>
+<th align="right">k</th>
+<th align="right">Moran&#39;s I</th>
+<th align="right">Expected I</th>
+<th align="right">Z resampling</th>
+<th align="right">P-value res.</th>
+<th align="right">Z randomization</th>
+<th align="right">P-value rand.</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="right">1</td>
+<td align="right">3</td>
+<td align="right">0.6823</td>
+<td align="right">-0.0031</td>
+<td align="right">16.4559</td>
+<td align="right">0</td>
+<td align="right">16.5519</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="right">2</td>
+<td align="right">4</td>
+<td align="right">0.6797</td>
+<td align="right">-0.0031</td>
+<td align="right">18.8569</td>
+<td align="right">0</td>
+<td align="right">18.9669</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="right">3</td>
+<td align="right">6</td>
+<td align="right">0.6544</td>
+<td align="right">-0.0031</td>
+<td align="right">22.2795</td>
+<td align="right">0</td>
+<td align="right">22.4095</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="right">4</td>
+<td align="right">9</td>
+<td align="right">0.6422</td>
+<td align="right">-0.0031</td>
+<td align="right">26.7714</td>
+<td align="right">0</td>
+<td align="right">26.9274</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="right">5</td>
+<td align="right">12</td>
+<td align="right">0.6206</td>
+<td align="right">-0.0031</td>
+<td align="right">29.9977</td>
+<td align="right">0</td>
+<td align="right">30.1725</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="right">6</td>
+<td align="right">18</td>
+<td align="right">0.5802</td>
+<td align="right">-0.0031</td>
+<td align="right">34.8110</td>
+<td align="right">0</td>
+<td align="right">35.0136</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="right">7</td>
+<td align="right">24</td>
+<td align="right">0.5523</td>
+<td align="right">-0.0031</td>
+<td align="right">38.8086</td>
+<td align="right">0</td>
+<td align="right">39.0342</td>
+<td align="right">0</td>
+</tr>
+</tbody></table>
+
+<h1>Local Moran&#39;s I</h1>
+
+<p>The next step is the calculation of local Moran \(I_i\) using the function <code>l.moransI</code>, which creates a Moran&#39;s I Scatter Plot by default, as follows:</p>
+
+<pre><code class="r">l.moran&lt;-l.moransI(Coords,6,GR.Municipalities@data$Income01)
+</code></pre>
+
+<p><img src="data:image/png;base64,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" alt="plot of chunk unnamed-chunk-10"/></p>
+
+<p>The object <code>l.moran</code> generated includes a plethora of results that can be plotted or mapped. </p>
+
+<h1>References</h1>
+
+<p>Cliff, A.D., and Ord, J.K., 1973, Spatial autocorrelation (London: Pion).</p>
+
+<p>Cliff, A.D., and Ord, J.K., 1981, Spatial processes: models and applications (London: Pion).</p>
+
+<p>Goodchild, M. F., 1986, Spatial Autocorrelation. Catmog 47, Geo Books.</p>
+
+<p>Griffith, D.A. (2003). Spatial autocorrelation and spatial filtering: gaining understanding through theory and scientific visualization. Berlin: Springer-Verlag.</p>
+
+<p>Kalogirou, S., 2003, The Statistical Analysis and Modelling of Internal Migration Flows within England and Wales, PhD Thesis, School of Geography, Politics and Sociology, University of Newcastle upon Tyne, UK. \url{<a href="http://gisc.gr/?mdocs-file=1245&amp;mdocs-url=false">http://gisc.gr/?mdocs-file=1245&amp;mdocs-url=false</a>}</p>
+
+<p>Kalogirou, S., 2015, Spatial Analysis: Methodology and Applications with R. [ebook] Athens: Hellenic Academic Libraries Link. ISBN: 978-960-603-285-1 (in Greek). \url{<a href="https://repository.kallipos.gr/handle/11419/5029?locale=en">https://repository.kallipos.gr/handle/11419/5029?locale=en</a>}</p>
+
+<p>Moran, P.A.P., 1948, The interpretation of statistical maps, Journal of the Royal Statistics Society, Series B (Methodological), 10, 2, pp. 243 - 251.</p>
+
+<p>Moran, P.A.P., 1950, Notes on continuous stochastic phenomena, Biometrika, 37, pp. 17 - 23.</p>
+
+</body>
+
+</html>

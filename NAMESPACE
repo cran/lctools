@@ -1,4 +1,5 @@
 exportPattern("^[[:alpha:]]+")
+importClassesFrom(sp,SpatialPolygonsDataFrame)
 importFrom("reshape",melt)
 importFrom("weights",wtd.cor)
 importFrom("pscl",zeroinfl)

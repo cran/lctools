@@ -10,7 +10,7 @@ vignette: >
 ---
 # Introduction
 
-This is a quick presentation for calculating the spatial decomposition of the Gini coefficient (Rey and Smith, 2013) in R with the package `lctools`. For more details about lctools see <http://cran.r-project.org/web/packages/lctools/index.html>. Please make sure that the R packages lctools and rgdal have been installed. 
+This is a quick presentation for calculating the spatial decomposition of the Gini coefficient (Rey and Smith, 2013) in R with the package `lctools`. For more details about lctools see <https://CRAN.R-project.org/package=lctools>. Please make sure that the R packages lctools and rgdal have been installed. 
 
 The dataset GR.Municipalities that comes with the package lctoos is a SpatialPolygonsDataFrame and refers to Municipalities of Greece. The descriptive data for each municipality include demographic and economic variables the source of which are the Hellenic Population Census of 2001 and the General Secretariat for Information Systems of the Hellenic Republic, respectively.
 
