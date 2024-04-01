@@ -26,10 +26,10 @@ Please carefully read the function \code{\link{optim}(stats)} when using a \code
 \item{CVs}{Available only in the case of the \code{exhaustive} algorithm. This is a numeric matrix in which the first column refers to the bandwidth in test and the second to the corresponding CV score.}
 }
 \references{
-Kalogirou, S. (2016) Destination Choice of Athenians: an application of geographically weighted versions of standard and zero inflated Poisson spatial interaction models, Geographical Analysis, 48(2),pp. 191-230. DOI: 10.1111/gean.12092 \url{http://onlinelibrary.wiley.com/doi/10.1111/gean.12092/abstract}
+Kalogirou, S. (2016) Destination Choice of Athenians: an application of geographically weighted versions of standard and zero inflated Poisson spatial interaction models, Geographical Analysis, 48(2),pp. 191-230. DOI: 10.1111/gean.12092 \url{https://onlinelibrary.wiley.com/doi/abs/10.1111/gean.12092}
 }
 
-\author{Stamatis Kalogirou <stamatis@lctools.science>}
+\author{Stamatis Kalogirou <stamatis.science@gmail.com>}
 
 \note{Please select the optimisation algorithm carefully. This function needs further testing. Please report any bugs!}
 

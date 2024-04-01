@@ -41,13 +41,13 @@ Moran, P.A.P., 1948, The interpretation of statistical maps, Journal of the Roya
 
 Moran, P.A.P., 1950, Notes on continuous stochastic phenomena, Biometrika, 37, pp. 17 - 23.
 
-Kalogirou, S. (2003) The Statistical Analysis and Modelling of Internal Migration Flows within England and Wales, PhD Thesis, School of Geography, Politics and Sociology, University of Newcastle upon Tyne, UK. \url{http://gisc.gr/?mdocs-file=1245&mdocs-url=false}
+Kalogirou, S. (2003) The Statistical Analysis and Modelling of Internal Migration Flows within England and Wales, PhD Thesis, School of Geography, Politics and Sociology, University of Newcastle upon Tyne, UK. \url{https://theses.ncl.ac.uk/jspui/handle/10443/204}
 
 Kalogirou, S. (2015) Spatial Analysis: Methodology and Applications with R. [ebook] Athens: Hellenic Academic Libraries Link. ISBN: 978-960-603-285-1 (in Greek). \url{https://repository.kallipos.gr/handle/11419/5029?locale=en}
 
-Paradis et al., 2016, ape: Analyses of Phylogenetics and Evolution, \url{http://ape-package.ird.fr/}
+Paradis et al., 2016, ape: Analyses of Phylogenetics and Evolution, \url{https://CRAN.R-project.org/package=ape}
 }
-\author{Stamatis Kalogirou <stamatis@lctools.science>}
+\author{Stamatis Kalogirou <stamatis.science@gmail.com>}
 
 \seealso{
 \code{\link{moransI}}, \code{\link{w.matrix}}

@@ -47,13 +47,13 @@ Moran, P.A.P., 1948, The interpretation of statistical maps, Journal of the Roya
 
 Moran, P.A.P., 1950, Notes on continuous stochastic phenomena, Biometrika, 37, pp. 17 - 23.
 
-Kalogirou, S. (2003) The Statistical Analysis and Modelling of Internal Migration Flows within England and Wales, PhD Thesis, School of Geography, Politics and Sociology, University of Newcastle upon Tyne, UK. \url{http://gisc.gr/?mdocs-file=1245&mdocs-url=false}
+Kalogirou, S. (2003) The Statistical Analysis and Modelling of Internal Migration Flows within England and Wales, PhD Thesis, School of Geography, Politics and Sociology, University of Newcastle upon Tyne, UK. \url{https://theses.ncl.ac.uk/jspui/handle/10443/204}
 
 Kalogirou, S. (2015) Spatial Analysis: Methodology and Applications with R. [ebook] Athens: Hellenic Academic Libraries Link. ISBN: 978-960-603-285-1 (in Greek). \url{https://repository.kallipos.gr/handle/11419/5029?locale=en}
 
-Paradis et al., 2014, ape: Analyses of Phylogenetics and Evolution, \url{http://ape-package.ird.fr/}
+Paradis et al., 2014, ape: Analyses of Phylogenetics and Evolution, \url{https://CRAN.R-project.org/package=ape}
 }
-\author{Stamatis Kalogirou <stamatis@lctools.science>}
+\author{Stamatis Kalogirou <stamatis.science@gmail.com>}
 
 \note{This function has been compared to the function Moran.I within the file MoranI.R of package ape version 3.1-4 (Paradis et al., 2014). This function results in the same Moran's I statistic as the one in package ape. The statistical inference in the latter refers to the randomization null hypotheses test discussed above. It is necessary to acknowledge that the code of this function has been assisted by the one in ape package: this is the calculation of statistics S1 and S2 (lines 67 and 69 of the source code) in this function. Another R package with functions for calculating and testing the Moran's I statistic and its significance is the spdep package (Bivand et al. 2014). The Moran's I statistic calculated using this function is not the same as the one in OpenGeoDa (Anselin et al., 2006). The latter is another very popular software for calculating spatial autocorrelation statistics.}
 

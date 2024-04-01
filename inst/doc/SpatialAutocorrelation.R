@@ -18,7 +18,7 @@ moran.table[1,4] <- mI$p.value.resampling
 moran.table[1,5] <- mI$z.randomization
 moran.table[1,6] <- mI$p.value.randomization
 
-## ---- echo=FALSE, results='asis'----------------------------------------------
+## ----echo=FALSE, results='asis'-----------------------------------------------
 knitr::kable(round(moran.table,5))
 
 ## -----------------------------------------------------------------------------
@@ -29,7 +29,7 @@ mI.adaptive <- moransI.w(GR.Municipalities@data$Income01, w.adaptive)
 mI.adaptive <- t(as.numeric(as.matrix(mI.adaptive[1:6])))
 colnames(mI.adaptive) <- col.names
 
-## ---- echo=FALSE, results='asis'----------------------------------------------
+## ----echo=FALSE, results='asis'-----------------------------------------------
 knitr::kable(round(mI.adaptive,5))
 
 ## -----------------------------------------------------------------------------
@@ -42,14 +42,14 @@ mI.fixed <- t(as.numeric(as.matrix(mI.fixed[1:6])))
 colnames(mI.fixed) <- col.names
 
 
-## ---- echo=FALSE, results='asis'----------------------------------------------
+## ----echo=FALSE, results='asis'-----------------------------------------------
 knitr::kable(round(mI.fixed ,5))
 
 ## ----fig.width = 5, fig.height = 5--------------------------------------------
 bws <- c(3, 4, 6, 9, 12, 18, 24)
 moran <- moransI.v(Coords, bws, GR.Municipalities@data$Income01)
 
-## ---- echo=FALSE, results='asis'----------------------------------------------
+## ----echo=FALSE, results='asis'-----------------------------------------------
 knitr::kable(round(moran,4))
 
 ## ----fig.width = 5, fig.height = 5--------------------------------------------

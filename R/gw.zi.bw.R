@@ -1,6 +1,6 @@
-gw.zi.cv <- function(bw, formula, family, dframe, obs, kernel, dmatrix)
+gw.zi.cv <- function(bw, formula, family, dframe, obs, kernel, dmatrix, ...)
 {  
-  Gl.Model <- eval(substitute(zeroinfl(formula, data = dframe, dist=family)))
+  Gl.Model <- eval(substitute(zeroinfl(formula, data = dframe, dist=family, ...)))
   
   RNames<-names(Gl.Model$coefficients$count)
   
@@ -49,7 +49,7 @@ gw.zi.cv <- function(bw, formula, family, dframe, obs, kernel, dmatrix)
       Wts[1]=0
       
       #Calculate WGLM
-      ZI.Model <- eval(substitute(zeroinfl(formula, data = SubSet, weights=Wts, dist=family)))
+      ZI.Model <- eval(substitute(zeroinfl(formula, data = SubSet, weights=Wts, dist=family, ...)))
 
       #Store in table
       ZI_LEst_count[m,]<-ZI.Model$coefficients$count

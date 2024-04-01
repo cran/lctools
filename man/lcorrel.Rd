@@ -25,13 +25,13 @@ lcorrel returns a list of 7 Data Frames
 }
 
 \references{
-Kalogirou, S. (2012) Testing local versions of correlation coefficients, Review of Regional Research - Jahrbuch fur Regionalwissenschaft, 32(1), pp. 45-61, doi: 10.1007/s10037-011-0061-y. \url{http://link.springer.com/article/10.1007/s10037-011-0061-y}
+Kalogirou, S. (2012) Testing local versions of correlation coefficients, Review of Regional Research - Jahrbuch fur Regionalwissenschaft, 32(1), pp. 45-61, doi: 10.1007/s10037-011-0061-y. \url{https://link.springer.com/article/10.1007/s10037-011-0061-y}
 
-Kalogirou, S. (2013) Testing geographically weighted multicollinearity diagnostics, GISRUK 2013, Department of Geography and Planning, School of Environmental Sciences, University of Liverpool, Liverpool, UK, 3-5 April 2013. \url{http://gisc.gr/?mdocs-file=1140&mdocs-url=false}
+Kalogirou, S. (2013) Testing geographically weighted multicollinearity diagnostics, GISRUK 2013, Department of Geography and Planning, School of Environmental Sciences, University of Liverpool, Liverpool, UK, 3-5 April 2013. \url{https://theses.ncl.ac.uk/jspui/handle/10443/204}
 
-Kalogirou, S. (2015) A spatially varying relationship between the proportion of foreign citizens and income at local authorities in Greece, 10th International Congress of the Hellenic Geographical Society,  Aristotle University of Thessaloniki, Thessaloniki 22-24 October 2014. \url{http://gisc.gr/?mdocs-file=1048&mdocs-url=false}
+Kalogirou, S. (2015) A spatially varying relationship between the proportion of foreign citizens and income at local authorities in Greece, 10th International Congress of the Hellenic Geographical Society,  Aristotle University of Thessaloniki, Thessaloniki 22-24 October 2014. 
 }
-\author{Stamatis Kalogirou <stamatis@lctools.science>}
+\author{Stamatis Kalogirou <stamatis.science@gmail.com>}
 
 \examples{
 data(VotesGR)

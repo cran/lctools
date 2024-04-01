@@ -38,7 +38,7 @@ Rey, S.J., Smith, R. J. (2013) A spatial decomposition of the Gini coefficient, 
 Kalogirou, S. (2015) Spatial Analysis: Methodology and Applications with R. [ebook] Athens: Hellenic Academic Libraries Link. ISBN: 978-960-603-285-1 (in Greek). \url{https://repository.kallipos.gr/handle/11419/5029?locale=en}
 }
 
-\author{Stamatis Kalogirou <stamatis@lctools.science>}
+\author{Stamatis Kalogirou <stamatis.science@gmail.com>}
 
 \note{Acknowledgement: I would like to thank LI Zai-jun, PhD student at Nanjing Normal University, China for encouraging me to develop this function and for testing this package.}
 

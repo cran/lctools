@@ -1,4 +1,4 @@
-gw.zi <- function(formula, family, dframe, bw, kernel, coords)
+gw.zi <- function(formula, family, dframe, bw, kernel, coords, ...)
 {  
   Obs <- nrow(dframe)
   
@@ -17,7 +17,7 @@ gw.zi <- function(formula, family, dframe, bw, kernel, coords)
     }
   }
 
-  Gl.Model <- eval(substitute(zeroinfl(formula, data = dframe, dist=family)))
+  Gl.Model <- eval(substitute(zeroinfl(formula, data = dframe, dist=family, ...)))
   
   RNames <- names(Gl.Model$coefficients$count)
   CountNames <- paste("CM",RNames, sep="_")
@@ -81,7 +81,7 @@ gw.zi <- function(formula, family, dframe, bw, kernel, coords)
 
     #Calculate GW-ZI
     
-    ZI.Model <- eval(substitute(zeroinfl(formula, data = SubSet, weights=Wts, dist=family)))
+    ZI.Model <- eval(substitute(zeroinfl(formula, data = SubSet, weights=Wts, dist=family, ...)))
     
     #print(summary(ZI.Model))
     

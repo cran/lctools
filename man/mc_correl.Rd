@@ -29,7 +29,7 @@ Hope, A.C.A. (1968) A Simplified Monte Carlo Significance Test Procedure, Journa
 
 Fotheringham, A.S, Brunsdon, C., Charlton, M. (2002) Geographically Weighted Regression: the analysis of spatially varying relationships, Chichester: John Wiley and Sons.}
 
-\author{Stamatis Kalogirou <stamatis@lctools.science>}
+\author{Stamatis Kalogirou <stamatis.science@gmail.com>}
 
 \examples{
 X<-rep(11:14, 4)

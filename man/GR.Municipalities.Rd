@@ -30,16 +30,15 @@
 The X,Y coordinates refer to the geometric centroids of the new 325 Municipalities in Greece (Programme Kallikratis) in 2011. The boundary data of the original shapefile have been simplified to reduce its detail and size. The polygon referring to Mount Athos has been removed as there is no data available for this politically autonomous area of Greece.
 }
 \source{
-The shapefile of the corresponding polygons is available from the Hellenic Statistical Authority (EL.STAT.) at \url{http://www.statistics.gr/el/digital-cartographical-data}. The population, employment, citizenship and employment sector data is available from the Hellenic Statistical Authority (EL.STAT.) at \url{http://www.statistics.gr/en/home} but were aggregated to the new municipalities by the author. The income data are available from the General Secretariat of Information Systems in Greece at \url{http://www.gsis.gr/} at the postcode level of geography and were aggregated to the new municipalities by the author.
+The shapefile of the corresponding polygons is available from the Hellenic Statistical Authority (EL.STAT.) at \url{https://www.statistics.gr/el/digital-cartographical-data}. The population, employment, citizenship and employment sector data is available from the Hellenic Statistical Authority (EL.STAT.) at \url{https://www.statistics.gr/en/home} but were aggregated to the new municipalities by the author. The income data are available from the General Secretariat of Information Systems in Greece at the postcode level of geography and were aggregated to the new municipalities by the author.
 }
 \references{
-Kalogirou, S., and Hatzichristos, T. (2007). A spatial modelling framework for income estimation. Spatial Economic Analysis, 2(3), 297-316. \url{http://www.tandfonline.com/doi/abs/10.1080/17421770701576921}
+Kalogirou, S., and Hatzichristos, T. (2007). A spatial modelling framework for income estimation. Spatial Economic Analysis, 2(3), 297-316. \url{https://www.tandfonline.com/doi/full/10.1080/17421770701576921}
 
-Kalogirou, S. (2010). Spatial inequalities in income and post-graduate educational attainment in Greece. Journal of Maps, 6(1), 393-400.\url{http://www.tandfonline.com/doi/abs/10.4113/jom.2010.1095}
+Kalogirou, S. (2010). Spatial inequalities in income and post-graduate educational attainment in Greece. Journal of Maps, 6(1), 393-400.\url{https://www.tandfonline.com/doi/abs/10.4113/jom.2010.1095}
 
-Kalogirou, S. (2013) Testing geographically weighted multicollinearity diagnostics, GISRUK 2013, Department of Geography and Planning, School of Environmental Sciences, University of Liverpool, Liverpool, UK, 3-5 April 2013. \url{http://gisc.gr/?mdocs-file=1140&mdocs-url=false}
+Kalogirou, S. (2013) Testing geographically weighted multicollinearity diagnostics, GISRUK 2013, Department of Geography and Planning, School of Environmental Sciences, University of Liverpool, Liverpool, UK, 3-5 April 2013.}
 
-}
 \examples{
 data(GR.Municipalities)
 boxplot(GR.Municipalities@data$Income01)
